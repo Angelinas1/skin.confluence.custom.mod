@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+
 	<include name="LiveTVChannelView">
 		<control type="group">
 			<description>TV Channels group</description>
-			<visible>Control.IsVisible(11)</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="group">
 				<posx>530</posx>
@@ -247,6 +247,7 @@
 				<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 				<animation effect="fade" start="100" end="0" time="2000" condition="Player.HasVideo + System.IdleTime(10) + !Skin.HasSetting(HideNowPlayingInfo)">Conditional</animation>	
 				<animation effect="slide" start="0,0" end="-490,0" delay="1000" time="3000" easing="out" tween="cubic" condition="Player.HasVideo + System.IdleTime(10) + !Skin.HasSetting(HideNowPlayingInfo)">Conditional</animation>
+
 				<posx>70</posx>
 				<posy>85</posy>
 				<width>390</width>
@@ -332,6 +333,7 @@
 						<posy></posy>
 						<width>80</width>
 						<height>66</height>
+
 						<texture>$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="image">
@@ -750,6 +752,9 @@
 				<onright condition="!Skin.HasSetting(DisableHomeReturnButtons)">82</onright>
 				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
+			</control>
+		</control>
+	</include>
 	<include name="LiveTVRecordingsView">
 		<control type="group">
 			<description>Recordings group</description>
