@@ -107,7 +107,7 @@
 				<onup>1000</onup>
 				<ondown>1000</ondown>
 				<onclick>Dialog.Close(MusicOSD,true)</onclick>
-				<onclick>ActivateWindow(PlayListMusic)</onclick>
+				<onclick>ActivateWindow(musicplaylist)</onclick>
 			</control>
 			<control type="button" id="602">
 				<posx>100</posx>

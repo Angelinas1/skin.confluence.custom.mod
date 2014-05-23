@@ -6,9 +6,6 @@
 		<posx>0</posx>
 		<posy>0</posy>
 	</coordinates>
-	<onload>SetProperty(MenuItemType,MainMenu)</onload>
-	<onunload>ClearProperty(MenuItemType)</onunload>
-	<onunload>ClearProperty(UsrSelectPath,home)</onunload>
 	<controls>
 		<control type="group">
 			<animation effect="slide" start="400,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>

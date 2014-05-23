@@ -100,7 +100,7 @@
 					<include>ButtonCommonValues</include>
 					<label>587</label>
 				</control>
-				<control type="radiobutton" id="98">
+				<control type="radiobutton" id="20">
 					<visible>Container.CanFilterAdvanced</visible>
 					<description>Filter</description>
 					<include>ButtonCommonValues</include>
@@ -118,7 +118,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 				</control>
-				<control type="radiobutton" id="99">
+				<control type="radiobutton" id="91">
 					<description>Subtitle Flags</description>
 					<textwidth>170</textwidth>
 					<include>ButtonCommonValues</include>
@@ -128,7 +128,7 @@
 					<visible>Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(503) | Control.IsVisible(504)</visible>
 					<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 				</control>
-				<control type="radiobutton" id="100">
+				<control type="radiobutton" id="92">
 					<description>individual Genre Icons</description>
 					<textwidth>170</textwidth>
 					<include>ButtonCommonValues</include>
@@ -137,7 +137,7 @@
 					<selected>!Skin.HasSetting(View501GenreIcons)</selected>
 					<visible>Control.IsVisible(501) + [Container.Content(TVShows) | Container.Content(Movies)]</visible>
 				</control>
-				<control type="radiobutton" id="101">
+				<control type="radiobutton" id="93">
 					<description>TVShow Banners Banners</description>
 					<textwidth>170</textwidth>
 					<include>ButtonCommonValues</include>
@@ -146,7 +146,7 @@
 					<selected>!Skin.HasSetting(View515HideTVBanners)</selected>
 					<visible>Control.IsVisible(515) + Container.Content(TVShows)</visible>
 				</control>
-				<control type="radiobutton" id="102">
+				<control type="radiobutton" id="94">
 					<description>TVShow Character Art</description>
 					<textwidth>170</textwidth>
 					<include>ButtonCommonValues</include>
@@ -155,7 +155,7 @@
 					<selected>Skin.HasSetting(View503CharacterArt)</selected>
 					<visible>Control.IsVisible(503) + Container.Content(TVShows)</visible>
 				</control>
-				<control type="radiobutton" id="103">
+				<control type="radiobutton" id="95">
 					<description>Show Season FanArt</description>
 					<textwidth>170</textwidth>
 					<include>ButtonCommonValues</include>
@@ -164,7 +164,7 @@
 					<selected>Skin.HasSetting(View515SeasonArt)</selected>
 					<visible>Control.IsVisible(515) + [Container.Content(Seasons) | Container.Content(Episodes)]</visible>
 				</control>
-				<control type="radiobutton" id="104">
+				<control type="radiobutton" id="96">
 					<description>Show Watched Banners</description>
 					<textwidth>170</textwidth>
 					<include>ButtonCommonValues</include>
@@ -173,7 +173,7 @@
 					<selected>!Skin.HasSetting(ViewStatusBanner)</selected>
 					<visible>Control.IsVisible(501) | Control.IsVisible(508) | Control.IsVisible(732)</visible>
 				</control>
-				<control type="radiobutton" id="105">
+				<control type="radiobutton" id="97">
 					<description>Show ExtraFanArt Toggle</description>
 					<textwidth>170</textwidth>
 					<include>ButtonCommonValues</include>
@@ -182,7 +182,7 @@
 					<selected>!Skin.HasSetting(View504XtraFanArt)</selected>
 					<visible>Control.IsVisible(504)</visible>
 				</control>
-				<control type="radiobutton" id="106">
+				<control type="radiobutton" id="98">
 					<description>Show Logo Toggle</description>
 					<textwidth>170</textwidth>
 					<include>ButtonCommonValues</include>
@@ -191,7 +191,7 @@
 					<selected>Skin.HasSetting(View515Hidelogo)</selected>
 					<visible>Control.IsVisible(515) + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
 				</control>
-				<control type="radiobutton" id="107">
+				<control type="radiobutton" id="99">
 					<description>Show Info Toggle</description>
 					<textwidth>170</textwidth>
 					<include>ButtonCommonValues</include>
@@ -200,7 +200,7 @@
 					<selected>Skin.HasSetting(View508HideInfo)</selected>
 					<visible>Control.IsVisible(508)</visible>
 				</control>
-				<control type="radiobutton" id="108">
+				<control type="radiobutton" id="100">
 					<description>Disable Show Info Toggle 508 Delay</description>
 					<textwidth>170</textwidth>
 					<include>ButtonCommonValues</include>
@@ -210,7 +210,7 @@
 					<enable>!Skin.HasSetting(View508HideInfo)</enable>
 					<visible>Control.IsVisible(508)</visible>
 				</control>
-				<control type="radiobutton" id="109">
+				<control type="radiobutton" id="101">
 					<description>Show Logo Toggle</description>
 					<textwidth>170</textwidth>
 					<include>ButtonCommonValues</include>
@@ -219,7 +219,7 @@
 					<selected>Skin.HasSetting(View730HideLogo)</selected>
 					<visible>Control.IsVisible(730) + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
 				</control>
-				<control type="radiobutton" id="110">
+				<control type="radiobutton" id="102">
 					<description>Show Episode Thumbnail Toggle</description>
 					<textwidth>170</textwidth>
 					<include>ButtonCommonValues</include>
@@ -228,7 +228,7 @@
 					<selected>Skin.HasSetting(View730ShowThumb)</selected>
 					<visible>Control.IsVisible(730) + Container.Content(Episodes)</visible>
 				</control>
-				<control type="radiobutton" id="111">
+				<control type="radiobutton" id="103">
 					<description>Show DVD Cases Toggle</description>
 					<textwidth>170</textwidth>
 					<include>ButtonCommonValues</include>
@@ -237,7 +237,7 @@
 					<selected>Skin.HasSetting(View724DisableCases)</selected>
 					<visible>Control.IsVisible(724)</visible>
 				</control>
-				<control type="radiobutton" id="112">
+				<control type="radiobutton" id="105">
 					<description>Use Disk Type Case</description>
 					<textwidth>170</textwidth>
 					<include>ButtonCommonValues</include>
@@ -258,6 +258,18 @@
 					<include>ButtonCommonValues</include>
 					<label>137</label>
 				</control>
+				<control type="radiobutton" id="7">
+					<description>Stack Toggle</description>
+					<textwidth>170</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>346</label>
+				</control>
+				<control type="radiobutton" id="17">
+					<description>Flatten</description>
+					<textwidth>170</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>20411</label>
+				</control>
 				<control type="radiobutton" id="16">
 					<description>PartyMode</description>
 					<label>589</label>
@@ -273,16 +285,7 @@
 					<selected>system.ismaster</selected>
 					<visible>system.haslocks</visible>
 				</control>
-				<control type="togglebutton" id="20">
-					<description>Update library</description>
-					<include>ButtonCommonValues</include>
-					<label>653</label>
-					<altlabel>13353</altlabel>
-					<alttexturefocus border="5">button-focus.png</alttexturefocus>
-					<alttexturenofocus>-</alttexturenofocus>
-					<usealttexture>library.isscanningvideo</usealttexture>
-				</control>
-				<control type="button" id="113">
+				<control type="button" id="104">
 					<description>Trakt.tv</description>
 					<include>ButtonCommonValues</include>
 					<label>31077</label>

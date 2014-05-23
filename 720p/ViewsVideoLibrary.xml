@@ -50,16 +50,6 @@
 						<texture>black-back.png</texture>
 						<colordiffuse>AAFFFFFF</colordiffuse>
 					</control>
-					<control type="image">
-						<posx>107</posx>
-						<posy>44</posy>
-						<width>105</width>
-						<height>105</height>
-						<fadetime>IconCrossfadeTime</fadetime>
-						<texture>$VAR[StatusBanner,StatusBanner/,.png]</texture>
-						<visible>!Skin.HasSetting(ViewStatusBanner) + !IsEmpty(ListItem.Overlay)</visible>
-					</control>
-					<!--	
 					<control type="group">
 						<visible>!Skin.HasSetting(ViewStatusBanner) + !IsEmpty(ListItem.Overlay)</visible>
 						<control type="image">
@@ -90,8 +80,6 @@
 							<visible>ListItem.IsResumable</visible>
 						</control>
 					</control>
-				
-				-->
 				</itemlayout>
 				<focusedlayout height="310" width="218">
 					<control type="image">
@@ -120,18 +108,6 @@
 						<animation reversible="false" effect="zoom" start="-2,36,222,318" end="-28,0,284,390" time="200">focus</animation>
 						<animation reversible="false" effect="zoom" end="-2,36,222,318" start="-28,0,284,390" time="200">unfocus</animation>
 					</control>
-					<control type="image">
-						<posx>108</posx>
-						<posy>43</posy>
-						<width>105</width>
-						<height>105</height>
-						<fadetime>IconCrossfadeTime</fadetime>
-						<texture>$VAR[StatusBanner,StatusBanner/,.png]</texture>
-						<animation reversible="false" effect="zoom" start="108,43,105,105" end="129,9,118,118" time="200">focus</animation>
-						<animation reversible="false" effect="zoom" end="108,43,105,105" start="129,9,118,118" time="200">unfocus</animation>
-						<visible>!Skin.HasSetting(ViewStatusBanner) + !IsEmpty(ListItem.Overlay)</visible>
-					</control>
-					<!--
 					<control type="group">
 						<visible>!Skin.HasSetting(ViewStatusBanner) + !IsEmpty(ListItem.Overlay)</visible>
 						<control type="image">
@@ -168,8 +144,6 @@
 							<visible>ListItem.IsResumable</visible>
 						</control>
 					</control>
-					
-					-->
 					<control type="image">
 						<posx>6</posx>
 						<posy>43</posy>
@@ -509,16 +483,6 @@
 						<fadetime>200</fadetime>
 						<texture background="true">$VAR[PosterThumb]</texture>
 					</control>
-					<control type="image">
-						<posx>48</posx>
-						<posy>24</posy>
-						<width>70</width>
-						<height>70</height>
-						<fadetime>IconCrossfadeTime</fadetime>
-						<texture>$VAR[StatusBanner,StatusBanner/,.png]</texture>
-						<visible>!Skin.HasSetting(ViewStatusBanner) + !IsEmpty(ListItem.Overlay)</visible>
-					</control>
-					<!--
 					<control type="group">
 						<visible>!Skin.HasSetting(ViewStatusBanner) + !IsEmpty(ListItem.Overlay)</visible>
 						<control type="image">
@@ -549,8 +513,6 @@
 							<visible>ListItem.IsResumable</visible>
 						</control>
 					</control>
-					
-					-->
 					<control type="image">
 						<posx>6</posx>
 						<posy>24</posy>
@@ -614,18 +576,6 @@
 						</animation>
 						<visible>Skin.HasSetting(ViewStatusBanner) +!stringcompare(Skin.String(WatchStatusType),Hidden) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
-					<control type="image">
-						<posx>48</posx>
-						<posy>24</posy>
-						<width>70</width>
-						<height>70</height>
-						<animation reversible="false" effect="zoom" start="48,24,70,70" end="47,-2,80,80" time="200">focus</animation>
-						<animation reversible="false" effect="zoom" end="48,24,70,70" start="47,-2,80,80" time="200">unfocus</animation>
-						<fadetime>IconCrossfadeTime</fadetime>
-						<texture>$VAR[StatusBanner,StatusBanner/,.png]</texture>
-						<visible>!Skin.HasSetting(ViewStatusBanner) + !IsEmpty(ListItem.Overlay)</visible>
-					</control>
-					<!--
 					<control type="group">
 						<visible>!Skin.HasSetting(ViewStatusBanner) + !IsEmpty(ListItem.Overlay)</visible>
 						<control type="image">
@@ -662,9 +612,6 @@
 							<visible>ListItem.IsResumable</visible>
 						</control>
 					</control>
-					
-					
-					-->
 					<control type="image">
 						<posx>6</posx>
 						<posy>24</posy>
@@ -2265,16 +2212,6 @@
 				<height>410</height>
 				<texture border="20">ContentPanel.png</texture>
 			</control>
-			<!--control type="image">
-				<posx>20</posx>
-				<posy>20</posy>
-				<width>880</width>
-				<height>370</height>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture background="true">$INFO[listitem.Studio,studios/,.png]</texture>
-				<animation effect="fade" end="65" condition="true">Conditional</animation>
-				<visible>!Container.Content(Seasons) + !Container.Content(Episodes)</visible>
-			</control-->
 			<control type="label">
 				<posx>40</posx>
 				<posy>20</posy>
@@ -2643,18 +2580,6 @@
 						<colordiffuse>AAFFFFFF</colordiffuse>
 						<visible>!StringCompare(ListItem.Label,..)</visible>
 					</control>
-					<control type="image">
-						<posx>54</posx>
-						<posy>5</posy>
-						<width>80</width>
-						<height>80</height>
-						<fadetime>IconCrossfadeTime</fadetime>
-						<texture>$VAR[StatusBanner,StatusBanner/,.png]</texture>
-						<visible>!Skin.HasSetting(ViewStatusBanner) + !IsEmpty(ListItem.Overlay)</visible>
-					</control>
-					<!--
-					
-					
 					<control type="group">
 						<visible>!Skin.HasSetting(ViewStatusBanner) + !IsEmpty(ListItem.Overlay)</visible>
 						<control type="image">
@@ -2685,9 +2610,6 @@
 							<visible>ListItem.IsResumable</visible>
 						</control>
 					</control>
-					
-					
-					-->
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -2731,16 +2653,6 @@
 							<texture background="true">$VAR[PosterThumb]</texture>
 							<bordertexture border="8">ThumbBorder.png</bordertexture>
 						</control>
-						<control type="image">
-							<posx>54</posx>
-							<posy>7</posy>
-							<width>80</width>
-							<height>80</height>
-							<fadetime>IconCrossfadeTime</fadetime>
-							<texture>$VAR[StatusBanner,StatusBanner/,.png]</texture>
-							<visible>!Skin.HasSetting(ViewStatusBanner) + !IsEmpty(ListItem.Overlay)</visible>
-						</control>
-						<!--
 						<control type="group">
 							<visible>!Skin.HasSetting(ViewStatusBanner) + !IsEmpty(ListItem.Overlay)</visible>
 							<control type="image">
@@ -2771,8 +2683,6 @@
 								<visible>ListItem.IsResumable</visible>
 							</control>
 						</control>
-						
-						-->
 						<control type="image">
 							<posx>85</posx>
 							<posy>150</posy>

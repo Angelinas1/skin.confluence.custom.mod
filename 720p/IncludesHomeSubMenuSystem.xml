@@ -14,13 +14,6 @@
 				<animation effect="slide" start="0,0" end="165,0" time="0" condition="StringCompare(Container(9010).NumItems,3)">conditional</animation>
 				<animation effect="slide" start="0,0" end="261,0" time="0" condition="StringCompare(Container(9010).NumItems,2)">conditional</animation>
 				<animation effect="slide" start="0,0" end="357,0" time="0" condition="StringCompare(Container(9010).NumItems,1)">conditional</animation>
-				<control type="list" id="9010">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9010</onleft>
-					<onright>9010</onright>
-					<include>HomeSubMenuCommonLayout</include>
-					<include>HomeSubMenuVideos</include>
-				</control>
 				<control type="image">
 					<posx>115</posx>
 					<posy>0</posy>
@@ -43,7 +36,7 @@
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">21</ondown>
 					<onclick>Control.Move(9010,-1)</onclick>
-					<visible>IntegerGreaterThan(Container(9010).NumItems,5) + Container(9010).HasPrevious</visible>
+					<visible>IntegerGreaterThan(Container(9010).NumItems,0) + Container(9010).HasPrevious</visible>
 				</control>
 				<control type="image">
 					<posx>1175</posx>
@@ -75,7 +68,14 @@
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9010).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-615,0" time="0" condition="StringCompare(Container(9010).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-820,0" time="0" condition="StringCompare(Container(9010).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9010).NumItems,5) + Container(9010).HasNext</visible>
+					<visible>IntegerGreaterThan(Container(9010).NumItems,0) + Container(9010).HasNext</visible>
+				</control>
+				<control type="list" id="9010">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9010</onleft>
+					<onright>9010</onright>
+					<include>HomeSubMenuCommonLayout</include>
+					<include>HomeSubMenuVideos</include>
 				</control>
 			</control>
 			<control type="group">
@@ -85,13 +85,6 @@
 				<animation effect="slide" start="0,0" end="165,0" time="0" condition="StringCompare(Container(9011).NumItems,3)">conditional</animation>
 				<animation effect="slide" start="0,0" end="261,0" time="0" condition="StringCompare(Container(9011).NumItems,2)">conditional</animation>
 				<animation effect="slide" start="0,0" end="357,0" time="0" condition="StringCompare(Container(9011).NumItems,1)">conditional</animation>
-				<control type="list" id="9011">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9011</onleft>
-					<onright>9011</onright>
-					<include>HomeSubMenuCommonLayout</include>
-					<include>HomeSubMenuMusic</include>
-				</control>
 				<control type="image">
 					<posx>115</posx>
 					<posy>0</posy>
@@ -114,7 +107,7 @@
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">21</ondown>
 					<onclick>Control.Move(9011,-1)</onclick>
-					<visible>IntegerGreaterThan(Container(9011).NumItems,5) + Container(9011).HasPrevious</visible>
+					<visible>IntegerGreaterThan(Container(9011).NumItems,0) + Container(9011).HasPrevious</visible>
 				</control>
 				<control type="image">
 					<posx>1175</posx>
@@ -146,7 +139,14 @@
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9011).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-615,0" time="0" condition="StringCompare(Container(9011).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-820,0" time="0" condition="StringCompare(Container(9011).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9011).NumItems,5) + Container(9011).HasNext</visible>
+					<visible>IntegerGreaterThan(Container(9011).NumItems,0) + Container(9011).HasNext</visible>
+				</control>
+				<control type="list" id="9011">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9011</onleft>
+					<onright>9011</onright>
+					<include>HomeSubMenuCommonLayout</include>
+					<include>HomeSubMenuMusic</include>
 				</control>
 			</control>
 			<control type="group">
@@ -156,13 +156,6 @@
 				<animation effect="slide" start="0,0" end="165,0" time="0" condition="StringCompare(Container(9012).NumItems,3)">conditional</animation>
 				<animation effect="slide" start="0,0" end="261,0" time="0" condition="StringCompare(Container(9012).NumItems,2)">conditional</animation>
 				<animation effect="slide" start="0,0" end="357,0" time="0" condition="StringCompare(Container(9012).NumItems,1)">conditional</animation>
-				<control type="list" id="9012">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9012</onleft>
-					<onright>9012</onright>
-					<include>HomeSubMenuCommonLayout</include>
-					<include>HomeSubMenuSystem</include>
-				</control>
 				<control type="image">
 					<posx>115</posx>
 					<posy>0</posy>
@@ -185,7 +178,7 @@
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">21</ondown>
 					<onclick>Control.Move(9012,-1)</onclick>
-					<visible>IntegerGreaterThan(Container(9012).NumItems,5) + Container(9012).HasPrevious</visible>
+					<visible>IntegerGreaterThan(Container(9012).NumItems,0) + Container(9012).HasPrevious</visible>
 				</control>
 				<control type="image">
 					<posx>1175</posx>
@@ -217,7 +210,14 @@
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9012).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-615,0" time="0" condition="StringCompare(Container(9012).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-820,0" time="0" condition="StringCompare(Container(9012).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9012).NumItems,5) + Container(9012).HasNext</visible>
+					<visible>IntegerGreaterThan(Container(9012).NumItems,0) + Container(9012).HasNext</visible>
+				</control>
+				<control type="list" id="9012">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9012</onleft>
+					<onright>9012</onright>
+					<include>HomeSubMenuCommonLayout</include>
+					<include>HomeSubMenuSystem</include>
 				</control>
 			</control>
 			<control type="group">
@@ -227,13 +227,6 @@
 				<animation effect="slide" start="0,0" end="165,0" time="0" condition="StringCompare(Container(9013).NumItems,3)">conditional</animation>
 				<animation effect="slide" start="0,0" end="261,0" time="0" condition="StringCompare(Container(9013).NumItems,2)">conditional</animation>
 				<animation effect="slide" start="0,0" end="357,0" time="0" condition="StringCompare(Container(9013).NumItems,1)">conditional</animation>
-				<control type="list" id="9013">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9013</onleft>
-					<onright>9013</onright>
-					<include>HomeSubMenuCommonLayout</include>
-					<include>HomeSubMenuPlayDisc</include>
-				</control>
 				<control type="image">
 					<posx>115</posx>
 					<posy>0</posy>
@@ -256,7 +249,7 @@
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">21</ondown>
 					<onclick>Control.Move(9013,-1)</onclick>
-					<visible>IntegerGreaterThan(Container(9013).NumItems,5) + Container(9013).HasPrevious</visible>
+					<visible>IntegerGreaterThan(Container(9013).NumItems,0) + Container(9013).HasPrevious</visible>
 				</control>
 				<control type="image">
 					<posx>1175</posx>
@@ -288,7 +281,14 @@
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9013).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-615,0" time="0" condition="StringCompare(Container(9013).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-820,0" time="0" condition="StringCompare(Container(9013).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9013).NumItems,5) + Container(9013).HasNext</visible>
+					<visible>IntegerGreaterThan(Container(9013).NumItems,0) + Container(9013).HasNext</visible>
+				</control>
+				<control type="list" id="9013">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9013</onleft>
+					<onright>9013</onright>
+					<include>HomeSubMenuCommonLayout</include>
+					<include>HomeSubMenuPlayDisc</include>
 				</control>
 			</control>
 			<control type="group">
@@ -298,13 +298,6 @@
 				<animation effect="slide" start="0,0" end="165,0" time="0" condition="StringCompare(Container(9014).NumItems,3)">conditional</animation>
 				<animation effect="slide" start="0,0" end="261,0" time="0" condition="StringCompare(Container(9014).NumItems,2)">conditional</animation>
 				<animation effect="slide" start="0,0" end="357,0" time="0" condition="StringCompare(Container(9014).NumItems,1)">conditional</animation>
-				<control type="list" id="9014">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9014</onleft>
-					<onright>9014</onright>
-					<include>HomeSubMenuCommonLayout</include>
-					<include>HomeSubMenuLiveTV</include>
-				</control>
 				<control type="image">
 					<posx>115</posx>
 					<posy>0</posy>
@@ -327,7 +320,7 @@
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">21</ondown>
 					<onclick>Control.Move(9014,-1)</onclick>
-					<visible>IntegerGreaterThan(Container(9014).NumItems,5) + Container(9014).HasPrevious</visible>
+					<visible>IntegerGreaterThan(Container(9014).NumItems,0) + Container(9014).HasPrevious</visible>
 				</control>
 				<control type="image">
 					<posx>1175</posx>
@@ -359,7 +352,14 @@
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9014).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-615,0" time="0" condition="StringCompare(Container(9014).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-820,0" time="0" condition="StringCompare(Container(9014).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9014).NumItems,5) + Container(9014).HasNext</visible>
+					<visible>IntegerGreaterThan(Container(9014).NumItems,0) + Container(9014).HasNext</visible>
+				</control>
+				<control type="list" id="9014">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9014</onleft>
+					<onright>9014</onright>
+					<include>HomeSubMenuCommonLayout</include>
+					<include>HomeSubMenuLiveTV</include>
 				</control>
 			</control>
 			<control type="group">
@@ -369,13 +369,6 @@
 				<animation effect="slide" start="0,0" end="165,0" time="0" condition="StringCompare(Container(9015).NumItems,3)">conditional</animation>
 				<animation effect="slide" start="0,0" end="261,0" time="0" condition="StringCompare(Container(9015).NumItems,2)">conditional</animation>
 				<animation effect="slide" start="0,0" end="357,0" time="0" condition="StringCompare(Container(9015).NumItems,1)">conditional</animation>
-				<control type="list" id="9015">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9015</onleft>
-					<onright>9015</onright>
-					<include>HomeSubMenuCommonLayout</include>
-					<include>HomeSubMenuPictures</include>
-				</control>
 				<control type="image">
 					<posx>115</posx>
 					<posy>0</posy>
@@ -398,7 +391,7 @@
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">21</ondown>
 					<onclick>Control.Move(9015,-1)</onclick>
-					<visible>IntegerGreaterThan(Container(9015).NumItems,5) + Container(9015).HasPrevious</visible>
+					<visible>IntegerGreaterThan(Container(9015).NumItems,0) + Container(9015).HasPrevious</visible>
 				</control>
 				<control type="image">
 					<posx>1175</posx>
@@ -430,7 +423,14 @@
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9015).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-615,0" time="0" condition="StringCompare(Container(9015).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-820,0" time="0" condition="StringCompare(Container(9015).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9015).NumItems,5) + Container(9015).HasNext</visible>
+					<visible>IntegerGreaterThan(Container(9015).NumItems,0) + Container(9015).HasNext</visible>
+				</control>
+				<control type="list" id="9015">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9015</onleft>
+					<onright>9015</onright>
+					<include>HomeSubMenuCommonLayout</include>
+					<include>HomeSubMenuPictures</include>
 				</control>
 			</control>
 			<control type="group">
@@ -440,13 +440,6 @@
 				<animation effect="slide" start="0,0" end="165,0" time="0" condition="StringCompare(Container(9016).NumItems,3)">conditional</animation>
 				<animation effect="slide" start="0,0" end="261,0" time="0" condition="StringCompare(Container(9016).NumItems,2)">conditional</animation>
 				<animation effect="slide" start="0,0" end="357,0" time="0" condition="StringCompare(Container(9016).NumItems,1)">conditional</animation>
-				<control type="list" id="9016">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9016</onleft>
-					<onright>9016</onright>
-					<include>HomeSubMenuCommonLayout</include>
-					<include>HomeSubMenuMovies</include>
-				</control>
 				<control type="image">
 					<posx>115</posx>
 					<posy>0</posy>
@@ -469,8 +462,7 @@
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">21</ondown>
 					<onclick>Control.Move(9016,-1)</onclick>
-					<!--onclick condition="system.getbool(input.enablemouse)">Control.Move(9016,1)</onclick-->
-					<visible>IntegerGreaterThan(Container(9016).NumItems,5) + Container(9016).HasPrevious</visible>
+					<visible>IntegerGreaterThan(Container(9016).NumItems,0) + Container(9016).HasPrevious</visible>
 				</control>
 				<control type="image">
 					<posx>1175</posx>
@@ -502,7 +494,14 @@
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9016).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-615,0" time="0" condition="StringCompare(Container(9016).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-820,0" time="0" condition="StringCompare(Container(9016).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9016).NumItems,5) + Container(9016).HasNext</visible>
+					<visible>IntegerGreaterThan(Container(9016).NumItems,0) + Container(9016).HasNext</visible>
+				</control>
+				<control type="list" id="9016">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9016</onleft>
+					<onright>9016</onright>
+					<include>HomeSubMenuCommonLayout</include>
+					<include>HomeSubMenuMovies</include>
 				</control>
 			</control>
 			<control type="group">
@@ -512,13 +511,6 @@
 				<animation effect="slide" start="0,0" end="165,0" time="0" condition="StringCompare(Container(9017).NumItems,3)">conditional</animation>
 				<animation effect="slide" start="0,0" end="261,0" time="0" condition="StringCompare(Container(9017).NumItems,2)">conditional</animation>
 				<animation effect="slide" start="0,0" end="357,0" time="0" condition="StringCompare(Container(9017).NumItems,1)">conditional</animation>
-				<control type="list" id="9017">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9017</onleft>
-					<onright>9017</onright>
-					<include>HomeSubMenuCommonLayout</include>
-					<include>HomeSubMenuTVShows</include>
-				</control>
 				<control type="image">
 					<posx>115</posx>
 					<posy>0</posy>
@@ -541,7 +533,7 @@
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">21</ondown>
 					<onclick>Control.Move(9017,-1)</onclick>
-					<visible>IntegerGreaterThan(Container(9017).NumItems,5) + Container(9017).HasPrevious</visible>
+					<visible>IntegerGreaterThan(Container(9017).NumItems,0) + Container(9017).HasPrevious</visible>
 				</control>
 				<control type="image">
 					<posx>1175</posx>
@@ -573,7 +565,14 @@
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9017).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-615,0" time="0" condition="StringCompare(Container(9017).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-820,0" time="0" condition="StringCompare(Container(9017).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9017).NumItems,5) + Container(9017).HasNext</visible>
+					<visible>IntegerGreaterThan(Container(9017).NumItems,0) + Container(9017).HasNext</visible>
+				</control>
+				<control type="list" id="9017">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9017</onleft>
+					<onright>9017</onright>
+					<include>HomeSubMenuCommonLayout</include>
+					<include>HomeSubMenuTVShows</include>
 				</control>
 			</control>
 			<control type="group">
@@ -583,13 +582,6 @@
 				<animation effect="slide" start="0,0" end="165,0" time="0" condition="StringCompare(Container(9019).NumItems,3)">conditional</animation>
 				<animation effect="slide" start="0,0" end="261,0" time="0" condition="StringCompare(Container(9019).NumItems,2)">conditional</animation>
 				<animation effect="slide" start="0,0" end="357,0" time="0" condition="StringCompare(Container(9019).NumItems,1)">conditional</animation>
-				<control type="list" id="9019">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9019</onleft>
-					<onright>9019</onright>
-					<include>HomeSubMenuCommonLayout</include>
-					<include>HomeSubMenuConcerts</include>
-				</control>
 				<control type="image">
 					<posx>115</posx>
 					<posy>0</posy>
@@ -612,7 +604,7 @@
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">21</ondown>
 					<onclick>Control.Move(9019,-1)</onclick>
-					<visible>IntegerGreaterThan(Container(9019).NumItems,5) + Container(9019).HasPrevious</visible>
+					<visible>IntegerGreaterThan(Container(9019).NumItems,0) + Container(9019).HasPrevious</visible>
 				</control>
 				<control type="image">
 					<posx>1175</posx>
@@ -644,7 +636,14 @@
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9019).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-615,0" time="0" condition="StringCompare(Container(9019).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-820,0" time="0" condition="StringCompare(Container(9019).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9019).NumItems,5) + Container(9019).HasNext</visible>
+					<visible>IntegerGreaterThan(Container(9019).NumItems,0) + Container(9019).HasNext</visible>
+				</control>
+				<control type="list" id="9019">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9019</onleft>
+					<onright>9019</onright>
+					<include>HomeSubMenuCommonLayout</include>
+					<include>HomeSubMenuConcerts</include>
 				</control>
 			</control>
 			<control type="group">
@@ -654,13 +653,6 @@
 				<animation effect="slide" start="0,0" end="165,0" time="0" condition="StringCompare(Container(9020).NumItems,3)">conditional</animation>
 				<animation effect="slide" start="0,0" end="261,0" time="0" condition="StringCompare(Container(9020).NumItems,2)">conditional</animation>
 				<animation effect="slide" start="0,0" end="357,0" time="0" condition="StringCompare(Container(9020).NumItems,1)">conditional</animation>
-				<control type="list" id="9020">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9020</onleft>
-					<onright>9020</onright>
-					<include>HomeSubMenuCommonLayout</include>
-					<include>HomeSubMenuFavourites</include>
-				</control>
 				<control type="image">
 					<posx>115</posx>
 					<posy>0</posy>
@@ -683,7 +675,7 @@
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">21</ondown>
 					<onclick>Control.Move(9020,-1)</onclick>
-					<visible>IntegerGreaterThan(Container(9020).NumItems,5) + Container(9020).HasPrevious</visible>
+					<visible>IntegerGreaterThan(Container(9020).NumItems,0) + Container(9020).HasPrevious</visible>
 				</control>
 				<control type="image">
 					<posx>1175</posx>
@@ -715,7 +707,14 @@
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9020).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-615,0" time="0" condition="StringCompare(Container(9020).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-820,0" time="0" condition="StringCompare(Container(9020).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9020).NumItems,5) + Container(9020).HasNext</visible>
+					<visible>IntegerGreaterThan(Container(9020).NumItems,0) + Container(9020).HasNext</visible>
+				</control>
+				<control type="list" id="9020">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9020</onleft>
+					<onright>9020</onright>
+					<include>HomeSubMenuCommonLayout</include>
+					<include>HomeSubMenuFavourites</include>
 				</control>
 			</control>
 			<control type="group">
@@ -725,13 +724,6 @@
 				<animation effect="slide" start="0,0" end="165,0" time="0" condition="StringCompare(Container(9021).NumItems,3)">conditional</animation>
 				<animation effect="slide" start="0,0" end="261,0" time="0" condition="StringCompare(Container(9021).NumItems,2)">conditional</animation>
 				<animation effect="slide" start="0,0" end="357,0" time="0" condition="StringCompare(Container(9021).NumItems,1)">conditional</animation>
-				<control type="list" id="9021">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9021</onleft>
-					<onright>9021</onright>
-					<include>HomeSubMenuCommonLayout</include>
-					<include>HomeSubMenuUserOne</include>
-				</control>
 				<control type="image">
 					<posx>115</posx>
 					<posy>0</posy>
@@ -754,7 +746,7 @@
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">21</ondown>
 					<onclick>Control.Move(9021,-1)</onclick>
-					<visible>IntegerGreaterThan(Container(9021).NumItems,5) + Container(9021).HasPrevious</visible>
+					<visible>IntegerGreaterThan(Container(9021).NumItems,0) + Container(9021).HasPrevious</visible>
 				</control>
 				<control type="image">
 					<posx>1175</posx>
@@ -786,7 +778,14 @@
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9021).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-615,0" time="0" condition="StringCompare(Container(9021).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-820,0" time="0" condition="StringCompare(Container(9021).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9021).NumItems,5) + Container(9021).HasNext</visible>
+					<visible>IntegerGreaterThan(Container(9021).NumItems,0) + Container(9021).HasNext</visible>
+				</control>
+				<control type="list" id="9021">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9021</onleft>
+					<onright>9021</onright>
+					<include>HomeSubMenuCommonLayout</include>
+					<include>HomeSubMenuUserOne</include>
 				</control>
 			</control>
 			<control type="group">
@@ -796,13 +795,6 @@
 				<animation effect="slide" start="0,0" end="165,0" time="0" condition="StringCompare(Container(9022).NumItems,3)">conditional</animation>
 				<animation effect="slide" start="0,0" end="261,0" time="0" condition="StringCompare(Container(9022).NumItems,2)">conditional</animation>
 				<animation effect="slide" start="0,0" end="357,0" time="0" condition="StringCompare(Container(9022).NumItems,1)">conditional</animation>
-				<control type="list" id="9022">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9022</onleft>
-					<onright>9022</onright>
-					<include>HomeSubMenuCommonLayout</include>
-					<include>HomeSubMenuUserTwo</include>
-				</control>
 				<control type="image">
 					<posx>115</posx>
 					<posy>0</posy>
@@ -825,7 +817,7 @@
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">21</ondown>
 					<onclick>Control.Move(9022,-1)</onclick>
-					<visible>IntegerGreaterThan(Container(9022).NumItems,5) + Container(9022).HasPrevious</visible>
+					<visible>IntegerGreaterThan(Container(9022).NumItems,0) + Container(9022).HasPrevious</visible>
 				</control>
 				<control type="image">
 					<posx>1175</posx>
@@ -857,7 +849,14 @@
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9022).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-615,0" time="0" condition="StringCompare(Container(9022).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-820,0" time="0" condition="StringCompare(Container(9022).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9022).NumItems,5) + Container(9022).HasNext</visible>
+					<visible>IntegerGreaterThan(Container(9022).NumItems,0) + Container(9022).HasNext</visible>
+				</control>
+				<control type="list" id="9022">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9022</onleft>
+					<onright>9022</onright>
+					<include>HomeSubMenuCommonLayout</include>
+					<include>HomeSubMenuUserTwo</include>
 				</control>
 			</control>
 			<control type="group">
@@ -867,13 +866,6 @@
 				<animation effect="slide" start="0,0" end="165,0" time="0" condition="StringCompare(Container(9023).NumItems,3)">conditional</animation>
 				<animation effect="slide" start="0,0" end="261,0" time="0" condition="StringCompare(Container(9023).NumItems,2)">conditional</animation>
 				<animation effect="slide" start="0,0" end="357,0" time="0" condition="StringCompare(Container(9023).NumItems,1)">conditional</animation>
-				<control type="list" id="9023">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9023</onleft>
-					<onright>9023</onright>
-					<include>HomeSubMenuCommonLayout</include>
-					<include>HomeSubMenuProg</include>
-				</control>
 				<control type="image">
 					<posx>115</posx>
 					<posy>0</posy>
@@ -896,7 +888,7 @@
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">21</ondown>
 					<onclick>Control.Move(9023,-1)</onclick>
-					<visible>IntegerGreaterThan(Container(9023).NumItems,5) + Container(9023).HasPrevious</visible>
+					<visible>IntegerGreaterThan(Container(9023).NumItems,0) + Container(9023).HasPrevious</visible>
 				</control>
 				<control type="image">
 					<posx>1175</posx>
@@ -928,7 +920,14 @@
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9023).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-615,0" time="0" condition="StringCompare(Container(9023).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-820,0" time="0" condition="StringCompare(Container(9023).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9023).NumItems,5) + Container(9023).HasNext</visible>
+					<visible>IntegerGreaterThan(Container(9023).NumItems,0) + Container(9023).HasNext</visible>
+				</control>
+				<control type="list" id="9023">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9023</onleft>
+					<onright>9023</onright>
+					<include>HomeSubMenuCommonLayout</include>
+					<include>HomeSubMenuProg</include>
 				</control>
 			</control>
 			<control type="group">
@@ -938,13 +937,6 @@
 				<animation effect="slide" start="0,0" end="165,0" time="0" condition="StringCompare(Container(9024).NumItems,3)">conditional</animation>
 				<animation effect="slide" start="0,0" end="261,0" time="0" condition="StringCompare(Container(9024).NumItems,2)">conditional</animation>
 				<animation effect="slide" start="0,0" end="357,0" time="0" condition="StringCompare(Container(9024).NumItems,1)">conditional</animation>
-				<control type="list" id="9024">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9024</onleft>
-					<onright>9024</onright>
-					<include>HomeSubMenuCommonLayout</include>
-					<include>HomeSubMenuUserThree</include>
-				</control>
 				<control type="image">
 					<posx>115</posx>
 					<posy>0</posy>
@@ -967,7 +959,7 @@
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">21</ondown>
 					<onclick>Control.Move(9024,-1)</onclick>
-					<visible>IntegerGreaterThan(Container(9024).NumItems,5) + Container(9024).HasPrevious</visible>
+					<visible>IntegerGreaterThan(Container(9024).NumItems,0) + Container(9024).HasPrevious</visible>
 				</control>
 				<control type="image">
 					<posx>1175</posx>
@@ -999,7 +991,14 @@
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9024).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-615,0" time="0" condition="StringCompare(Container(9024).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-820,0" time="0" condition="StringCompare(Container(9024).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9024).NumItems,5) + Container(9024).HasNext</visible>
+					<visible>IntegerGreaterThan(Container(9024).NumItems,0) + Container(9024).HasNext</visible>
+				</control>
+				<control type="list" id="9024">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9024</onleft>
+					<onright>9024</onright>
+					<include>HomeSubMenuCommonLayout</include>
+					<include>HomeSubMenuUserThree</include>
 				</control>
 			</control>
 		</control>
@@ -1243,10 +1242,10 @@
 			<item>
 				<label>$VAR[SubMenuMoviesSix]</label>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !IsEmpty(Skin.String(SubMovies.6.Path))">Skin.SetString(HomeItemLastAction,$INFO[Skin.String(SubMovies.6.Path)])</onclick>
-				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubMovies.6.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(VideoLibrary,special://PlayListVideos/,return))</onclick>
+				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubMovies.6.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(VideoLibrary,special://videoplaylists/,return))</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction)">Skin.SetString(HomeItemLastLabel,$VAR[SubMenuMoviesSix])</onclick>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick condition="IsEmpty(Skin.String(SubMovies.6.Path))">ActivateWindow(VideoLibrary,special://PlayListVideos/,return)</onclick>
+				<onclick condition="IsEmpty(Skin.String(SubMovies.6.Path))">ActivateWindow(VideoLibrary,special://videoplaylists/,return)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SubMovies.6.Path))">$INFO[Skin.String(SubMovies.6.Path)]</onclick>
 				<visible>!stringcompare(Skin.String(SubMovies.6.Path),Hidden)</visible>
 			</item>
@@ -1497,7 +1496,7 @@
 				<onclick>ActivateWindow(SkinSettings),return</onclick>
 			</item>
 			<item>
-				<label>$VAR[OS-Label]</label>
+				<label>31123</label>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 				<onclick condition="System.HasAddon(os.openelec.settings)">RunAddon(os.openelec.settings)</onclick>
 				<onclick condition="System.HasAddon(service.openelec.settings)">RunAddon(service.openelec.settings)</onclick>

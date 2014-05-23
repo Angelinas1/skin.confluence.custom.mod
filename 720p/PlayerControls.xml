@@ -52,8 +52,8 @@
 				<onup>615</onup>
 				<ondown>615</ondown>
 				<onclick>Dialog.Close(playercontrols ,true)</onclick>
-				<onclick condition="Player.HasAudio">ActivateWindow(PlayListMusic)</onclick>
-				<onclick condition="Player.HasVideo">ActivateWindow(PlayListVideo)</onclick>
+				<onclick condition="Player.HasAudio">ActivateWindow(musicplaylist)</onclick>
+				<onclick condition="Player.HasVideo">ActivateWindow(videoplaylist)</onclick>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="602">

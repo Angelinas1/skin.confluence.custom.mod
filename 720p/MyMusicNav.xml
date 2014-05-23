@@ -92,7 +92,7 @@
 					<include>ButtonCommonValues</include>
 					<label>587</label>
 				</control>
-				<control type="radiobutton" id="98">
+				<control type="radiobutton" id="20">
 					<visible>Container.CanFilterAdvanced</visible>
 					<description>Filter</description>
 					<include>ButtonCommonValues</include>
@@ -128,16 +128,6 @@
 					<description>PartyMode</description>
 					<label>589</label>
 					<include>ButtonCommonValues</include>
-				</control>
-				<control type="togglebutton" id="20">
-					<description>Update library</description>
-					<textwidth>235</textwidth>
-					<include>ButtonCommonValues</include>
-					<label>653</label>
-					<altlabel>13353</altlabel>
-					<alttexturefocus border="5">button-focus.png</alttexturefocus>
-					<alttexturenofocus>-</alttexturenofocus>
-					<usealttexture>library.isscanningmusic</usealttexture>
 				</control>
 				<include>CommonNowPlaying_Controls</include>
 			</control>

@@ -203,7 +203,7 @@
 					<width>50</width>
 					<height>50</height>
 					<aspectratio align="center">keep</aspectratio>
-					<texture>CommonCount/PlayListMusicsCount.png</texture>
+					<texture>CommonCount/MusicPlaylistsCount.png</texture>
 				</control>
 				<control type="grouplist">
 					<posx>300r</posx>

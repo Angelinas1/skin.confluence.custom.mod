@@ -52,7 +52,7 @@
 				<aspectratio>scale</aspectratio>
 				<include>VisibleFadeEffect</include>
 				<texture>special://skin/extras/Holiday/xmastree.jpg</texture>
-				<visible>IsEmpty(Skin.String(HolidayThemePath)) | !Window.IsVisible(home) + !IsEmpty(Skin.String(HolidayThemePath))</visible>
+				<visible>IsEmpty(Skin.String(HolidayThemePath))</visible>
 			</control>
 			<control type="multiimage">
 				<description>Holiday Theme Images</description>
@@ -277,40 +277,6 @@
 				<fadetime>FanartCrossfadeTime</fadetime>
 				<include>Window_OpenClose_Animation</include>
 				<visible>!StringCompare(ListItem.Label,..) + Container.Content(genres)</visible>
-			</control>
-			<control type="image">
-				<posx>-350</posx>
-				<posy>440r</posy>
-				<width>720</width>
-				<height>720</height>
-				<include>BackgroundFade</include>
-				<fadetime>FanartCrossfadeTime</fadetime>
-				<aspectratio>stretch</aspectratio>
-				<texture background="true">$INFO[ListItem.Art(discart)]</texture>
-				<animation effect="rotate" end="-45" center="auto" time="0" condition="true">Conditional</animation>
-				<visible>!IsEmpty(ListItem.Art(discart))</visible>
-			</control>
-			<control type="image">
-				<posx>-5</posx>
-				<posy>570r</posy>
-				<width>512</width>
-				<height>512</height>
-				<include>BackgroundFade</include>
-				<fadetime>FanartCrossfadeTime</fadetime>
-				<aspectratio align="left" aligny="bottom">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Art(characterart)]</texture>
-				<visible>IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(characterart)) + !Container.Content(Episodes)</visible>
-			</control>
-			<control type="image">
-				<posx>-5</posx>
-				<posy>570r</posy>
-				<width>512</width>
-				<height>512</height>
-				<include>BackgroundFade</include>
-				<fadetime>FanartCrossfadeTime</fadetime>
-				<aspectratio align="left" aligny="bottom">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Art(tvshow.characterart)]</texture>
-				<visible>IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(tvshow.characterart)) + Container.Content(Episodes)</visible>
 			</control>
 		</control>
 		<control type="image">

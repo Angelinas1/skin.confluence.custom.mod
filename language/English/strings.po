@@ -792,9 +792,7 @@ msgctxt "#31203"
 msgid "Choose Your Song"
 msgstr ""
 
-msgctxt "#31204"
-msgid "Settings level"
-msgstr ""
+#empty string with id 31204
 
 msgctxt "#31205"
 msgid "Lyrics Source"
@@ -848,35 +846,7 @@ msgctxt "#31217"
 msgid "Search"
 msgstr ""
 
-msgctxt "#31218"
-msgid "Selected"
-msgstr ""
-
-msgctxt "#31219"
-msgid "Global Search"
-msgstr ""
-
-msgctxt "#31220"
-msgid "Edit Menu Item"
-msgstr ""
-
-msgctxt "#31221"
-msgid "Enter XBMC Command"
-msgstr ""
-
-msgctxt "#31222"
-msgid "Window"
-msgstr ""
-
-msgctxt "#31223"
-msgid "Installed Add-Ons"
-msgstr ""
-
-msgctxt "#31224"
-msgid "User Favourites"
-msgstr ""
-
-#empty strings from id 31225 to 31299
+#empty strings from id 31218 to 31299
 #Extra labels
 
 msgctxt "#31300"
@@ -1122,22 +1092,7 @@ msgctxt "#31376"
 msgid "Enable System Weather"
 msgstr ""
 
-#empty strings from id 31377 to 31386
-
-
-
-# Stereoscopic labels
-msgctxt "#31387"
-msgid "Watch as 2D"
-msgstr ""
-
-msgctxt "#31388"
-msgid "Change mode"
-msgstr ""
-
-msgctxt "#31389"
-msgid "Enabled"
-msgstr ""
+#empty strings from id 31377 to 31389
 
 msgctxt "#31390"
 msgid "Skin Default"
@@ -1197,10 +1152,6 @@ msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of XBMC via UPnP a
 msgstr ""
 
 #empty strings from id 31411 to 31420
-
-msgctxt "#31413"
-msgid "Local subtitle available"
-msgstr ""
 
 msgctxt "#31421"
 msgid "Select your XBMC user Profile[CR]to login and continue"
@@ -1483,8 +1434,6 @@ msgctxt "#31910"
 msgid "Map & Alerts"
 msgstr ""
 
-#empty strings from id 31911 to 31944
-
 msgctxt "#31945"
 msgid "Use Live Backgrounds"
 msgstr ""
@@ -1495,28 +1444,4 @@ msgstr ""
 
 msgctxt "#31947"
 msgid "Holiday Theme"
-msgstr ""
-
-msgctxt "#31948"
-msgid "Enable Wrap Around Home Menu"
-msgstr ""
-
-msgctxt "#31949"
-msgid "New"
-msgstr ""
-
-msgctxt "#31950"
-msgid "In Progress"
-msgstr ""
-
-msgctxt "#31951"
-msgid "XBMC Command"
-msgstr ""
-
-msgctxt "#31952"
-msgid "Enable Play Disc Menu Item"
-msgstr ""
-
-msgctxt "#31953"
-msgid "Enable New Media Banners"
 msgstr ""
