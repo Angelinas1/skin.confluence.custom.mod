@@ -62,7 +62,7 @@
 					<description>Plot Value for TVShow</description>
 					<posx>0</posx>
 					<posy>43</posy>
-					<width>5100</width>
+					<width>510</width>
 					<height>80</height>
 					<font>font12</font>
 					<align>justify</align>
