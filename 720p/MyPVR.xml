@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol>32</defaultcontrol>
-	<defaultcontrol>701</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<include>CommonBackground</include>
@@ -21,7 +20,7 @@
 				<height>680</height>
 				<visible>Player.HasVideo + System.IdleTime(10) + !Skin.HasSetting(HideNowPlayingInfo)| Control.IsVisible(10)</visible>
 				<animation effect="fade" start="0" end="100" time="3000" condition="Player.HasVideo + System.IdleTime(10) + !Skin.HasSetting(HideNowPlayingInfo) + !Control.IsVisible(10)">Conditional</animation>
-				<texture>dialogs/dialog_back.png</texture>
+				<texture>dialog_back.png</texture>
 			</control>
 			<control type="image">
 				<posx>515</posx>
@@ -60,13 +59,13 @@
 			</control>
 				<control type="image">
 				<animation effect="zoom" start="90" end="120" center="auto" time="1550">Focus</animation>
-				<posx>10</posx>
+			    <posx>10</posx>
 				<posy>30</posy>
-			    	<width>400</width>
-				<height>280</height>
-				<texture>$INFO[ListItem.Icon]</texture>
+			    <width>400</width>
+			    <height>280</height>
+			    <texture>$INFO[ListItem.Icon]</texture>
 				<camera x="250" y="250"/>
-        			<animation condition="true" effect="rotatey" center="100" start="-45" end="-35" time="0">Conditional</animation>
+                <animation condition="true" effect="rotatey" center="100" start="-45" end="-35" time="0">Conditional</animation>
 				<visible>!Player.HasVideo + !Control.IsVisible(10)</visible>
 			</control>
 			<control type="videowindow">
@@ -141,16 +140,16 @@
 		<control type="group">
 			<posx>-250</posx>
 			<include>SideBladeLeft</include>
-				<control type="grouplist" id="9000">
-					<posx>0</posx>
-					<posy>110</posy>
-					<width>250</width>
-					<height>600</height>
-					<onleft>32</onleft>
-					<onright>32</onright>
-					<onup>9000</onup>
-					<ondown>9000</ondown>
-					<itemgap>0</itemgap>
+			<control type="grouplist" id="9000">
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>250</width>
+				<height>600</height>
+				<onleft>32</onleft>
+				<onright>32</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<itemgap>0</itemgap>
 				<control type="label" id="200">
 					<width>250</width>
 					<height>35</height>
