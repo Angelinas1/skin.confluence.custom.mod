@@ -83,9 +83,16 @@
 				<control type="group">
 					<posx>40</posx>
 					<posy>120</posy>
+				<control type="image">
+						<posx>420</posx>
+						<posy>-15</posy>
+						<width>220</width>
+						<height>160</height>
+						<texture>$INFO[ListItem.PlotOutline]</texture>
+					</control>					
 					<control type="label">
 						<description>Time description</description>
-						<posx>170</posx>
+						<posx>80</posx>
 						<posy>0</posy>
 						<width>170</width>
 						<height>25</height>
@@ -97,7 +104,7 @@
 					</control>
 					<control type="label">
 						<description>Time value</description>
-						<posx>180</posx>
+						<posx>90</posx>
 						<posy>0</posy>
 						<width>470</width>
 						<height>25</height>
@@ -109,7 +116,7 @@
 					</control>
 					<control type="label">
 						<description>Duration</description>
-						<posx>170</posx>
+						<posx>80</posx>
 						<posy>35</posy>
 						<width>170</width>
 						<height>25</height>
@@ -121,7 +128,7 @@
 					</control>
 					<control type="label">
 						<description>Duration value</description>
-						<posx>180</posx>
+						<posx>90</posx>
 						<posy>35</posy>
 						<width>470</width>
 						<height>25</height>
@@ -133,7 +140,7 @@
 					</control>
 					<control type="label">
 						<description>Channel Name</description>
-						<posx>170</posx>
+						<posx>80</posx>
 						<posy>70</posy>
 						<width>170</width>
 						<height>25</height>
@@ -145,7 +152,7 @@
 					</control>
 					<control type="fadelabel">
 						<description>Channel Value</description>
-						<posx>180</posx>
+						<posx>90</posx>
 						<posy>70</posy>
 						<width>470</width>
 						<height>25</height>
@@ -157,7 +164,7 @@
 					</control>
 					<control type="label">
 						<description>Genre</description>
-						<posx>170</posx>
+						<posx>80</posx>
 						<posy>105</posy>
 						<width>170</width>
 						<height>25</height>
@@ -169,7 +176,7 @@
 					</control>
 					<control type="label">
 						<description>Genre value</description>
-						<posx>180</posx>
+						<posx>90</posx>
 						<posy>105</posy>
 						<width>470</width>
 						<label fallback="161">$INFO[ListItem.Genre]</label>
