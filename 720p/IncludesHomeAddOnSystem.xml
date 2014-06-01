@@ -151,6 +151,7 @@
 	<include name="HomeAddonsCommonLayout">
 		<include>Window_OpenClose_Animation</include>
 		<animation effect="slide" start="0,0" end="0,-195" time="0" condition="!Skin.HasSetting(RaiseMainMenuBar)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="0,45" time="0" condition="Skin.HasSetting(EnableLargeWidget) + !Skin.HasSetting(RaiseMainMenuBar)">Conditional</animation>
 		<animation type="Visible">
 			<effect type="slide" start="0,30" end="0,0" delay="200" easing="out" tween="quadratic" time="200" />
 			<effect type="fade" start="0" end="100" delay="200" time="200" />

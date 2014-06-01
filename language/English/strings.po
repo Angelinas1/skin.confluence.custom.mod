@@ -1031,7 +1031,11 @@ msgctxt "#31333"
 msgid "Startup"
 msgstr ""
 
-#empty strings from id 31334 to 31350
+msgctxt "#31334"
+msgid "Enable Large Widget Layout"
+msgstr ""
+
+#empty strings from id 31335 to 31350
 #Video and Music OSD Labels
 
 msgctxt "#31351"

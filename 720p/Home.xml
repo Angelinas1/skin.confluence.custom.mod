@@ -36,7 +36,7 @@
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
-		<include condition="!Skin.HasSetting(HideNowPlayingInfo)">MediaNowPlaying</include>
+		<include condition="!Skin.HasSetting(HideNowPlayingInfo) + !Skin.HasSetting(EnableLargeWidget)">MediaNowPlaying</include>
 		<include>HomeWidgetPanel</include>
 		<control type="button" id="9003">
 			<posx>-20</posx>
