@@ -1089,29 +1089,38 @@
 	</include>
 	<include name="HomeSubMenuVideos">
 		<content>
+			<!--setting type="string" name="skin.confluence.custom.mod.UPnP_Path">upnp://9aab24a3-d6e4-0171-e007-e5361f92448d/</setting-->
+			<!--
+		SubString(Container.FolderPath,videodb://,left)
+		
+		SubString(Skin.String(UPnP_Path,upnp://,left)
+		Skin.HasSetting(UPnP_Mode) |
+		-->
 			<item>
 				<label>$VAR[SubMenuVideosOne]</label>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !IsEmpty(Skin.String(SubVideos.1.Path))">Skin.SetString(HomeItemLastAction,$INFO[Skin.String(VideoSubMenu.1.Path)])</onclick>
-				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubVideos.1.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(Videos,MovieTitles,return))</onclick>
+				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubVideos.1.Path))">$VAR[MoviesRecentCmd]</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction)">Skin.SetString(HomeItemLastLabel,$VAR[SubMenuVideosOne])</onclick>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick condition="IsEmpty(Skin.String(SubVideos.1.Path))">ActivateWindow(Videos,MovieTitles,return)</onclick>
+				<onclick condition="IsEmpty(Skin.String(SubVideos.1.Path))">$VAR[MoviesRecentCmd]</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SubVideos.1.Path))">$INFO[Skin.String(SubVideos.1.Path)]</onclick>
-				<visible>Library.HasContent(Movies) | !IsEmpty(Skin.String(SubVideos.1.Path))</visible>
+				<visible>Skin.HasSetting(UPnP_Mode) | Library.HasContent(Movies) | !IsEmpty(Skin.String(SubVideos.1.Path))</visible>
 				<visible>!stringcompare(Skin.String(SubVideos.1.Path),Hidden)</visible>
 			</item>
 			<item>
 				<label>$VAR[SubMenuVideosTwo]</label>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !IsEmpty(Skin.String(SubVideos.2.Path))">Skin.SetString(HomeItemLastAction,$INFO[Skin.String(SubVideos.2.Path)])</onclick>
-				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubVideos.2.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(Videos,TvShowTitles,return))</onclick>
+				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(SubVideos.2.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(Videos,TvShowTitles,return))</onclick>
+				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(SubVideos.2.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]videodb%3a%2f%2f2%2f2%2f/",return))</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction)">Skin.SetString(HomeItemLastLabel,$VAR[SubMenuVideosTwo])</onclick>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick condition="IsEmpty(Skin.String(SubVideos.2.Path))">ActivateWindow(Videos,TvShowTitles,return)</onclick>
+				<onclick condition="IsEmpty(Skin.String(SubVideos.2.Path)) + !Skin.HasSetting(UPnP_Mode)">ActivateWindow(Videos,TvShowTitles,return)</onclick>
+				<onclick condition="IsEmpty(Skin.String(SubVideos.1.Path)) + Skin.HasSetting(UPnP_Mode)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]videodb%3a%2f%2f2%2f2%2f/",return)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SubVideos.2.Path))">$INFO[Skin.String(SubVideos.2.Path)]</onclick>
-				<visible>Library.HasContent(TVShows) | !IsEmpty(Skin.String(SubVideos.2.Path))</visible>
+				<visible>Skin.HasSetting(UPnP_Mode) | Library.HasContent(TVShows) | !IsEmpty(Skin.String(SubVideos.2.Path))</visible>
 				<visible>!stringcompare(Skin.String(SubVideos.2.Path),Hidden)</visible>
 			</item>
-			<item>
+			<!--item>
 				<label>$VAR[SubMenuVideosThree]</label>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !IsEmpty(Skin.String(SubVideos.3.Path))">Skin.SetString(HomeItemLastAction,$INFO[Skin.String(SubVideos.3.Path)])</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubVideos.3.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(Videos,MusicVideoTitles,return))</onclick>
@@ -1121,8 +1130,8 @@
 				<onclick condition="!IsEmpty(Skin.String(SubVideos.3.Path))">$INFO[Skin.String(SubVideos.3.Path)]</onclick>
 				<visible>Library.HasContent(MusicVideos) | !IsEmpty(Skin.String(SubVideos.3.Path))</visible>
 				<visible>!stringcompare(Skin.String(SubVideos.3.Path),Hidden)</visible>
-			</item>
-			<item>
+			</item-->
+			<!--item>
 				<label>$VAR[SubMenuVideosFour]</label>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !IsEmpty(Skin.String(SubVideos.4.Path))">Skin.SetString(HomeItemLastAction,$INFO[Skin.String(SubVideos.4.Path)])</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubVideos.4.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(Videos,Files,return))</onclick>
@@ -1131,16 +1140,18 @@
 				<onclick condition="IsEmpty(Skin.String(SubVideos.4.Path))">ActivateWindow(Videos,Files,return)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SubVideos.4.Path))">$INFO[Skin.String(SubVideos.4.Path)]</onclick>
 				<visible>!stringcompare(Skin.String(SubVideos.4.Path),Hidden)</visible>
-			</item>
+			</item-->
 			<item>
-				<label>$VAR[SubMenuVideosFive]</label>
+				<!--label>$VAR[SubMenuVideosFive]</label-->
+				<label>UPnP Files</label>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !IsEmpty(Skin.String(SubVideos.5.Path))">Skin.SetString(HomeItemLastAction,$INFO[Skin.String(SubVideos.5.Path)])</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubVideos.5.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(Videos,Root))</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction)">Skin.SetString(HomeItemLastLabel,$VAR[SubMenuVideosFive])</onclick>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick condition="IsEmpty(Skin.String(SubVideos.5.Path))">ActivateWindow(Videos,Root)</onclick>
+				<!--onclick condition="IsEmpty(Skin.String(SubVideos.5.Path))">ActivateWindow(Videos,Root)</onclick-->
+				<onclick>ActivateWindow(10025,"$INFO[Skin.String(UPnP_Path)]sources%3a%2f%2fvideo%2f/",return)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SubVideos.5.Path))">$INFO[Skin.String(SubVideos.5.Path)]</onclick>
-				<visible>Library.HasContent(Video) | !IsEmpty(Skin.String(SubVideos.5.Path))</visible>
+				<!--visible>Library.HasContent(Video) | !IsEmpty(Skin.String(SubVideos.5.Path))</visible-->
 				<visible>!stringcompare(Skin.String(SubVideos.5.Path),Hidden)</visible>
 			</item>
 			<item>
@@ -1192,61 +1203,61 @@
 			<item>
 				<label>$VAR[SubMenuMoviesOne]</label>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !IsEmpty(Skin.String(SubMovies.1.Path))">Skin.SetString(HomeItemLastAction,$INFO[Skin.String(SubMovies.1.Path)])</onclick>
-				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubMovies.1.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(Videos,RecentlyAddedMovies,return))</onclick>
+				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubMovies.1.Path))">Skin.SetString(HomeItemLastAction,$VAR[MoviesRecentCmd])</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction)">Skin.SetString(HomeItemLastLabel,$VAR[SubMenuMoviesOne])</onclick>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick condition="IsEmpty(Skin.String(SubMovies.1.Path))">ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
+				<onclick condition="IsEmpty(Skin.String(SubMovies.1.Path))">$VAR[MoviesRecentCmd]</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SubMovies.1.Path))">$INFO[Skin.String(SubMovies.1.Path)]</onclick>
 				<visible>!stringcompare(Skin.String(SubMovies.1.Path),Hidden)</visible>
 			</item>
 			<item>
 				<label>$VAR[SubMenuMoviesTwo]</label>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !IsEmpty(Skin.String(SubMovies.2.Path))">Skin.SetString(HomeItemLastAction,$INFO[Skin.String(SubMovies.2.Path)])</onclick>
-				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubMovies.2.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(Videos,MovieSets,return))</onclick>
+				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubMovies.2.Path))">Skin.SetString(HomeItemLastAction,$VAR[MoviesSetsCmd])</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction)">Skin.SetString(HomeItemLastLabel,$VAR[SubMenuMoviesTwo])</onclick>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick condition="IsEmpty(Skin.String(SubMovies.2.Path))">ActivateWindow(Videos,MovieSets,return)</onclick>
+				<onclick condition="IsEmpty(Skin.String(SubMovies.2.Path))">$VAR[MoviesSetsCmd]</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SubMovies.2.Path))">$INFO[Skin.String(SubMovies.2.Path)]</onclick>
-				<visible>Library.HasContent(MovieSets) | !IsEmpty(Skin.String(SubMovies.2.Path))</visible>
+				<!--visible>Library.HasContent(MovieSets) | !IsEmpty(Skin.String(SubMovies.2.Path))</visible-->
 				<visible>!stringcompare(Skin.String(SubMovies.2.Path),Hidden)</visible>
 			</item>
 			<item>
 				<label>$VAR[SubMenuMoviesThree]</label>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !IsEmpty(Skin.String(SubMovies.3.Path))">Skin.SetString(HomeItemLastAction,$INFO[Skin.String(SubMovies.3.Path)])</onclick>
-				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubMovies.3.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(Videos,MovieTitles,return))</onclick>
+				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubMovies.3.Path))">Skin.SetString(HomeItemLastAction,$VAR[MoviesTitleCmd])</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction)">Skin.SetString(HomeItemLastLabel,$VAR[SubMenuMoviesThree])</onclick>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick condition="IsEmpty(Skin.String(SubMovies.3.Path))">ActivateWindow(Videos,MovieTitles,return)</onclick>
+				<onclick condition="IsEmpty(Skin.String(SubMovies.3.Path))">$VAR[MoviesTitleCmd]</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SubMovies.3.Path))">$INFO[Skin.String(SubMovies.3.Path)]</onclick>
 				<visible>!stringcompare(Skin.String(SubMovies.3.Path),Hidden)</visible>
 			</item>
 			<item>
 				<label>$VAR[SubMenuMoviesFour]</label>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !IsEmpty(Skin.String(SubMovies.4.Path))">Skin.SetString(HomeItemLastAction,$INFO[Skin.String(SubMovies.4.Path)])</onclick>
-				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubMovies.4.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(Videos,MovieGenres,return))</onclick>
+				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubMovies.4.Path))">Skin.SetString(HomeItemLastAction,$VAR[MoviesGenreCmd])</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction)">Skin.SetString(HomeItemLastLabel,$VAR[SubMenuMoviesFour])</onclick>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick condition="IsEmpty(Skin.String(SubMovies.4.Path))">ActivateWindow(Videos,MovieGenres,return)</onclick>
+				<onclick condition="IsEmpty(Skin.String(SubMovies.4.Path))">$VAR[MoviesGenreCmd]</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SubMovies.4.Path))">$INFO[Skin.String(SubMovies.4.Path)]</onclick>
 				<visible>!stringcompare(Skin.String(SubMovies.4.Path),Hidden)</visible>
 			</item>
 			<item>
 				<label>$VAR[SubMenuMoviesFive]</label>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !IsEmpty(Skin.String(SubMovies.5.Path))">Skin.SetString(HomeItemLastAction,$INFO[Skin.String(SubMovies.5.Path)])</onclick>
-				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubMovies.5.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(Videos,MovieTags,return))</onclick>
+				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubMovies.5.Path))">Skin.SetString(HomeItemLastAction,$VAR[MoviesTagsCmd])</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction)">Skin.SetString(HomeItemLastLabel,$VAR[SubMenuMoviesFive])</onclick>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick condition="IsEmpty(Skin.String(SubMovies.5.Path))">ActivateWindow(Videos,MovieTags,return)</onclick>
+				<onclick condition="IsEmpty(Skin.String(SubMovies.5.Path))">$VAR[MoviesTagsCmd]</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SubMovies.5.Path))">$INFO[Skin.String(SubMovies.5.Path)]</onclick>
 				<visible>!stringcompare(Skin.String(SubMovies.5.Path),Hidden)</visible>
 			</item>
 			<item>
 				<label>$VAR[SubMenuMoviesSix]</label>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !IsEmpty(Skin.String(SubMovies.6.Path))">Skin.SetString(HomeItemLastAction,$INFO[Skin.String(SubMovies.6.Path)])</onclick>
-				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubMovies.6.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(VideoLibrary,special://PlayListVideos/,return))</onclick>
+				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubMovies.6.Path))">Skin.SetString(HomeItemLastAction,$VAR[MoviesPlaylistCmd])</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction)">Skin.SetString(HomeItemLastLabel,$VAR[SubMenuMoviesSix])</onclick>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick condition="IsEmpty(Skin.String(SubMovies.6.Path))">ActivateWindow(VideoLibrary,special://PlayListVideos/,return)</onclick>
+				<onclick condition="IsEmpty(Skin.String(SubMovies.6.Path))">$VAR[MoviesPlaylistCmd]</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SubMovies.6.Path))">$INFO[Skin.String(SubMovies.6.Path)]</onclick>
 				<visible>!stringcompare(Skin.String(SubMovies.6.Path),Hidden)</visible>
 			</item>
@@ -1289,60 +1300,60 @@
 			<item>
 				<label>$VAR[SubMenuTVShowsOne]</label>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !IsEmpty(Skin.String(SubTVShows.1.Path))">Skin.SetString(HomeItemLastAction,$INFO[Skin.String(SubTVShows.1.Path)])</onclick>
-				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubTVShows.1.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(Videos,library://video/inprogressshows.xml/,return))</onclick>
+				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubTVShows.1.Path))">Skin.SetString(HomeItemLastAction,$VAR[TVShowInProgressCmd])</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction)">Skin.SetString(HomeItemLastLabel,$VAR[SubMenuTVShowsOne])</onclick>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick condition="IsEmpty(Skin.String(SubTVShows.1.Path))">ActivateWindow(Videos,library://video/inprogressshows.xml/,return)</onclick>
+				<onclick condition="IsEmpty(Skin.String(SubTVShows.1.Path))">$VAR[TVShowInProgressCmd]</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SubTVShows.1.Path))">$INFO[Skin.String(SubTVShows.1.Path)]</onclick>
 				<visible>!stringcompare(Skin.String(SubTVShows.1.Path),Hidden)</visible>
 			</item>
 			<item>
 				<label>$VAR[SubMenuTVShowsTwo]</label>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !IsEmpty(Skin.String(SubTVShows.2.Path))">Skin.SetString(HomeItemLastAction,$INFO[Skin.String(SubTVShows.2.Path)])</onclick>
-				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubTVShows.2.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(Videos,RecentlyAddedEpisodes,return))</onclick>
+				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubTVShows.2.Path))">Skin.SetString(HomeItemLastAction,$VAR[TVShowRecentCmd]</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction)">Skin.SetString(HomeItemLastLabel,$VAR[SubMenuTVShowsTwo])</onclick>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick condition="IsEmpty(Skin.String(SubTVShows.2.Path))">ActivateWindow(Videos,RecentlyAddedEpisodes,return)</onclick>
+				<onclick condition="IsEmpty(Skin.String(SubTVShows.2.Path))">$VAR[TVShowRecentCmd]</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SubTVShows.2.Path))">$INFO[Skin.String(SubTVShows.2.Path)]</onclick>
 				<visible>!stringcompare(Skin.String(SubTVShows.2.Path),Hidden)</visible>
 			</item>
 			<item>
 				<label>$VAR[SubMenuTVShowsThree]</label>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !IsEmpty(Skin.String(SubTVShows.3.Path))">Skin.SetString(HomeItemLastAction,$INFO[Skin.String(SubTVShows.3.Path)])</onclick>
-				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubTVShows.3.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(Videos,TVShowTitles,return))</onclick>
+				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubTVShows.3.Path))">Skin.SetString(HomeItemLastAction,$VAR[TVShowTitleCmd])</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction)">Skin.SetString(HomeItemLastLabel,$VAR[SubMenuTVShowsThree])</onclick>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick condition="IsEmpty(Skin.String(SubTVShows.3.Path))">ActivateWindow(Videos,TVShowTitles,return)</onclick>
+				<onclick condition="IsEmpty(Skin.String(SubTVShows.3.Path))">$VAR[TVShowTitleCmd]</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SubTVShows.3.Path))">$INFO[Skin.String(SubTVShows.3.Path)]</onclick>
 				<visible>!stringcompare(Skin.String(SubTVShows.3.Path),Hidden)</visible>
 			</item>
 			<item>
 				<label>$VAR[SubMenuTVShowsFour]</label>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !IsEmpty(Skin.String(SubTVShows.4.Path))">Skin.SetString(HomeItemLastAction,$INFO[Skin.String(SubTVShows.4.Path)])</onclick>
-				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubTVShows.4.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(Videos,TVShowGenres,return))</onclick>
+				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubTVShows.4.Path))">Skin.SetString(HomeItemLastAction,$VAR[TVShowGenreCmd])</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction)">Skin.SetString(HomeItemLastLabel,$VAR[SubMenuTVShowsFour])</onclick>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick condition="IsEmpty(Skin.String(SubTVShows.4.Path))">ActivateWindow(Videos,TVShowGenres,return)</onclick>
+				<onclick condition="IsEmpty(Skin.String(SubTVShows.4.Path))">$VAR[TVShowGenreCmd]</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SubTVShows.4.Path))">$INFO[Skin.String(SubTVShows.4.Path)]</onclick>
 				<visible>!stringcompare(Skin.String(SubTVShows.4.Path),Hidden)</visible>
 			</item>
 			<item>
 				<label>$VAR[SubMenuTVShowsFive]</label>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !IsEmpty(Skin.String(SubTVShows.5.Path))">Skin.SetString(HomeItemLastAction,$INFO[Skin.String(SubTVShows.5.Path)])</onclick>
-				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubTVShows.5.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(Videos,TVShowTags, return))</onclick>
+				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubTVShows.5.Path))">Skin.SetString(HomeItemLastAction,$VAR[TVShowTagsCmd])</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction)">Skin.SetString(HomeItemLastLabel,$VAR[SubMenuTVShowsFive])</onclick>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick condition="IsEmpty(Skin.String(SubTVShows.5.Path))">ActivateWindow(Videos,TVShowTags, return)</onclick>
+				<onclick condition="IsEmpty(Skin.String(SubTVShows.5.Path))">$VAR[TVShowTagsCmd]</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SubTVShows.5.Path))">$INFO[Skin.String(SubTVShows.5.Path)]</onclick>
 				<visible>!stringcompare(Skin.String(SubTVShows.5.Path),Hidden)</visible>
 			</item>
 			<item>
 				<label>$VAR[SubMenuTVShowsSix]</label>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + !IsEmpty(Skin.String(SubTVShows.6.Path))">Skin.SetString(HomeItemLastAction,$INFO[Skin.String(SubTVShows.6.Path)])</onclick>
-				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubTVShows.6.Path))">Skin.SetString(HomeItemLastAction,ActivateWindow(Videos,TVShowYears,return))</onclick>
+				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction) + IsEmpty(Skin.String(SubTVShows.6.Path))">Skin.SetString(HomeItemLastAction,$VAR[TVShowYearsCmd])</onclick>
 				<onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(StickyHomeMenuAction)">Skin.SetString(HomeItemLastLabel,$VAR[SubMenuTVShowsSix])</onclick>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick condition="IsEmpty(Skin.String(SubTVShows.6.Path))">ActivateWindow(Videos,TVShowYears,return)</onclick>
+				<onclick condition="IsEmpty(Skin.String(SubTVShows.6.Path))">$VAR[TVShowYearsCmd]</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SubTVShows.6.Path))">$INFO[Skin.String(SubTVShows.6.Path)]</onclick>
 				<visible>!stringcompare(Skin.String(SubTVShows.6.Path),Hidden)</visible>
 			</item>

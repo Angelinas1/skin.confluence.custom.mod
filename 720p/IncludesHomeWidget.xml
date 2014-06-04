@@ -4047,7 +4047,8 @@
 				<!-- Movies Playlist-->
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),PlayListVideo) + !Skin.HasSetting(DisableScriptPlayList)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(PlayListType),Movie)</visible>
-				<visible>Skin.HasSetting(EnableLargeWidget)</visible><!--  + IntegerGreaterThan(Container(8029).NumItems,0) -->
+				<visible>Skin.HasSetting(EnableLargeWidget)</visible>
+				<!--  + IntegerGreaterThan(Container(8029).NumItems,0) -->
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
@@ -4340,7 +4341,7 @@
 					<visible>Control.HasFocus(8029) + Container(8029).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
-			</control>	
+			</control>
 			<!-- #######  8029  ##### -->
 			<control type="group">
 				<left>160</left>
@@ -5229,21 +5230,19 @@
 			</control>
 		</focusedlayout>
 	</include>
-	
 	<include name="MovieLargeWidgetLayout">
 		<itemlayout height="285" width="195">
-						<control type="image">
-							<left>9</left>
-							<top>8</top>
-							<width>176</width>
-							<height>268</height>
-							<aspectratio>scale</aspectratio>
-							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
-						</control>
-					</itemlayout>
-		
+			<control type="image">
+				<left>9</left>
+				<top>8</top>
+				<width>176</width>
+				<height>268</height>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+				<bordertexture border="5">button-nofocus.png</bordertexture>
+				<bordersize>5</bordersize>
+			</control>
+		</itemlayout>
 		<!--itemlayout height="220" width="180">
 			<control type="image">
 				<description>background</description>
@@ -5277,31 +5276,29 @@
 			</control>
 		</itemlayout-->
 		<focusedlayout height="285" width="195">
-						<control type="image">
-							<left>9</left>
-							<top>8</top>
-							<width>176</width>
-							<height>268</height>
-							<aspectratio>scale</aspectratio>
-							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
-							<visible>Control.HasFocus(8029)</visible>
-						</control>
-						<control type="image">
-							<left>9</left>
-							<top>8</top>
-							<width>176</width>
-							<height>268</height>
-							<aspectratio>scale</aspectratio>
-							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
-							<visible>!Control.HasFocus(8029)</visible>
-						</control>
-					</focusedlayout>
-		
-		
+			<control type="image">
+				<left>9</left>
+				<top>8</top>
+				<width>176</width>
+				<height>268</height>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+				<bordertexture border="5">folder-focus.png</bordertexture>
+				<bordersize>5</bordersize>
+				<visible>Control.HasFocus(8029)</visible>
+			</control>
+			<control type="image">
+				<left>9</left>
+				<top>8</top>
+				<width>176</width>
+				<height>268</height>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+				<bordertexture border="5">button-nofocus.png</bordertexture>
+				<bordersize>5</bordersize>
+				<visible>!Control.HasFocus(8029)</visible>
+			</control>
+		</focusedlayout>
 		<!--focusedlayout height="220" width="180">
 			<control type="image">
 				<description>background</description>
@@ -5359,8 +5356,6 @@
 			</control>
 		</focusedlayout-->
 	</include>
-	
-	
 	<include name="EpisodeWidgetLayout">
 		<itemlayout height="220" width="240">
 			<control type="image">
