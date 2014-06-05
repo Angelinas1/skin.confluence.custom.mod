@@ -4,6 +4,7 @@
 	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
 	<onload condition="System.HasAddon(script.favourites)">XBMC.RunScript(script.favourites)</onload>
 	<onload>SetProperty(MenuItemActive,Settings,Home)</onload>
+	<onload condition="IsEmpty(Skin.String(UPnPServer))">Skin.SetString(UPnPServer,XBMC)</onload>
 	<onload condition="stringcompare(Container(9008).ListItem.Label,$LOCALIZE[31700]) + stringcompare(Skin.String(MPAACountryCert),$LOCALIZE[31701])">Control.Move(9008,1)</onload>
 	<onload condition="stringcompare(Container(9008).ListItem.Label,$LOCALIZE[31700]) + stringcompare(Skin.String(MPAACountryCert),$LOCALIZE[31703])">Control.Move(9008,2)</onload>
 	<onload condition="stringcompare(Container(9008).ListItem.Label,$LOCALIZE[31700]) + stringcompare(Skin.String(MPAACountryCert),$LOCALIZE[31706])">Control.Move(9008,3)</onload>
@@ -296,10 +297,53 @@
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
+						
+<!--onclick>Skin.SetPath(UPnP_Path)</onclick-->
+						
+						
 						<onclick>ActivateWindow(2128)</onclick>
+						
+						
 						<enable>Skin.HasSetting(UPnP_Mode)</enable>
 					</control>
-					<control type="label" id="105">
+					
+					
+					
+					
+					
+				<!-- Type of server toggle --> 	
+					
+				<control type="button" id="127">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31342]</label>
+						<label2>[COLOR=selected]$VAR[UPnPServerType][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick condition="IsEmpty(Skin.String(UPnPServer))">Skin.SetString(UPnPServer,XBMC)</onclick>
+						
+						<!--
+						<onclick condition="Skin.String(UPnPServer,USA)">Skin.SetString(UPnPServer,UK)</onclick>
+						<onclick condition="Skin.String(UPnPServer,UK)">Skin.SetString(UPnPServer,Aus)</onclick>
+						<onclick condition="Skin.String(UPnPServer,Aus)">Skin.SetString(UPnPServer,Bra)</onclick>
+						<onclick condition="Skin.String(UPnPServer,Bra)">Skin.SetString(UPnPServer,Can)</onclick>
+						<onclick condition="Skin.String(UPnPServer,Can)">Skin.SetString(UPnPServer,DK)</onclick>
+						<onclick condition="Skin.String(UPnPServer,DK)">Skin.SetString(UPnPServer,DE)</onclick>
+						<onclick condition="Skin.String(UPnPServer,DE)">Skin.SetString(UPnPServer,HK)</onclick>
+						<onclick condition="Skin.String(UPnPServer,HK)">Skin.SetString(UPnPServer,Ire)</onclick>
+						<onclick condition="Skin.String(UPnPServer,Ire)">Skin.SetString(UPnPServer,Jpn)</onclick>
+						<onclick condition="Skin.String(UPnPServer,Jpn)">Skin.SetString(UPnPServer,NL)</onclick>
+						<onclick condition="Skin.String(UPnPServer,NL)">Skin.SetString(UPnPServer,USA)</onclick>
+						-->
+						<enable>Skin.HasSetting(UPnP_Mode)</enable>
+					</control>	
+					
+					
+					
+					<control type="label" id="106">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -309,7 +353,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="106">
+					<control type="radiobutton" id="107">
 						<description>Christmas Theme</description>
 						<width>750</width>
 						<height>40</height>
@@ -323,7 +367,7 @@
 						<selected>Skin.HasSetting(HolidayEffects)</selected>
 						<visible>System.Date(11-24,1-6)</visible>
 					</control>
-					<control type="radiobutton" id="107">
+					<control type="radiobutton" id="108">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -346,7 +390,7 @@
 						<onclick>Skin.Reset(AutoScroll)</onclick>
 						<selected>Skin.HasSetting(EnableMinSpec)</selected>
 					</control>
-					<control type="radiobutton" id="108">
+					<control type="radiobutton" id="109">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -358,7 +402,7 @@
 						<onclick>Skin.ToggleSetting(ABCKeyBoard)</onclick>
 						<selected>!Skin.HasSetting(ABCKeyBoard)</selected>
 					</control>
-					<control type="radiobutton" id="109">
+					<control type="radiobutton" id="110">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -370,7 +414,7 @@
 						<onclick>Skin.ToggleSetting(HideSystemClock)</onclick>
 						<selected>!Skin.HasSetting(HideSystemClock)</selected>
 					</control>
-					<control type="radiobutton" id="110">
+					<control type="radiobutton" id="111">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -384,7 +428,7 @@
 						<enable>!Skin.HasSetting(EnableMinSpec)</enable>
 						<visible>!IsEmpty(Weather.Plugin)</visible>
 					</control>
-					<control type="radiobutton" id="111">
+					<control type="radiobutton" id="112">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -396,7 +440,7 @@
 						<onclick>Skin.ToggleSetting(KioskMode)</onclick>
 						<selected>Skin.HasSetting(KioskMode)</selected>
 					</control>
-					<control type="radiobutton" id="112">
+					<control type="radiobutton" id="113">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -409,7 +453,7 @@
 						<enable>!Skin.HasSetting(EnableMinSpec)</enable>
 						<selected>!Skin.HasSetting(HideBusyAnimation)</selected>
 					</control>
-					<control type="radiobutton" id="113">
+					<control type="radiobutton" id="114">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -421,7 +465,7 @@
 						<onclick>Skin.ToggleSetting(ParentDirLabel)</onclick>
 						<selected>!Skin.HasSetting(ParentDirLabel)</selected>
 					</control>
-					<control type="radiobutton" id="114">
+					<control type="radiobutton" id="115">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -433,7 +477,7 @@
 						<onclick>Skin.ToggleSetting(MediaShortDescription)</onclick>
 						<selected>Skin.HasSetting(MediaShortDescription)</selected>
 					</control>
-					<control type="radiobutton" id="115">
+					<control type="radiobutton" id="116">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -445,7 +489,7 @@
 						<onclick>Skin.ToggleSetting(HideNumItemsCount)</onclick>
 						<selected>Skin.HasSetting(HideNumItemsCount)</selected>
 					</control>
-					<control type="radiobutton" id="116">
+					<control type="radiobutton" id="117">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -458,7 +502,7 @@
 						<enable>!Skin.HasSetting(EnableMinSpec)</enable>
 						<selected>Skin.HasSetting(HideBackGroundFanart)</selected>
 					</control>
-					<control type="radiobutton" id="117">
+					<control type="radiobutton" id="118">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -470,7 +514,7 @@
 						<onclick>Skin.ToggleSetting(HideEpisodeThumb)</onclick>
 						<selected>!Skin.HasSetting(HideEpisodeThumb)</selected>
 					</control>
-					<control type="radiobutton" id="118">
+					<control type="radiobutton" id="119">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -483,7 +527,7 @@
 						<enable>!Skin.HasSetting(EnableMinSpec)</enable>
 						<selected>!Skin.HasSetting(ShowBackgroundVis)</selected>
 					</control>
-					<control type="label" id="119">
+					<control type="label" id="120">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -493,7 +537,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="120">
+					<control type="radiobutton" id="121">
 						<description>enable wrap around menu</description>
 						<width>750</width>
 						<height>40</height>
@@ -506,7 +550,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="121">
+					<control type="radiobutton" id="122">
 						<description>Raise Main Menu</description>
 						<width>750</width>
 						<height>40</height>
@@ -519,7 +563,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="122">
+					<control type="radiobutton" id="123">
 						<description>Enable PlayDisc</description>
 						<width>750</width>
 						<height>40</height>
@@ -532,7 +576,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="123">
+					<control type="radiobutton" id="124">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -544,7 +588,7 @@
 						<onclick>Skin.ToggleSetting(AutoHideSubMenu)</onclick>
 						<selected>!Skin.HasSetting(AutoHideSubMenu)</selected>
 					</control>
-					<control type="radiobutton" id="124">
+					<control type="radiobutton" id="125">
 						<description>enable Now Playing Info</description>
 						<width>750</width>
 						<height>40</height>
@@ -558,7 +602,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<enable>!Skin.HasSetting(EnableLargeWidget)</enable>
 					</control>
-					<control type="radiobutton" id="125">
+					<control type="radiobutton" id="126">
 						<description>Show System Stats</description>
 						<width>750</width>
 						<height>40</height>
@@ -572,7 +616,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					
-					<control type="button" id="128">
+					<control type="button" id="127">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -585,7 +629,7 @@
 						<enable>!Skin.HasSetting(HideHomeSearch)</enable>
 						<visible>System.HasAddon(script.globalsearch)</visible>
 					</control>
-					<control type="radiobutton" id="129">
+					<control type="radiobutton" id="128">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>

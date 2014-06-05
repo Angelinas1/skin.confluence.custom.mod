@@ -56,7 +56,11 @@ msgctxt "#31010"
 msgid "Found"
 msgstr ""
 
-#empty strings from id 31011 to 31015
+msgctxt "#31011"
+msgid "XBMC"
+msgstr ""
+
+#empty strings from id 31012 to 31015
 
 msgctxt "#31016"
 msgid "Shows"
@@ -1069,6 +1073,10 @@ msgstr ""
 
 msgctxt "#31341"
 msgid "UPnp Mode"
+msgstr ""
+
+msgctxt "#31342"
+msgid "UPnp Server Type"
 msgstr ""
 
 #empty strings from id 31340 to 31350
