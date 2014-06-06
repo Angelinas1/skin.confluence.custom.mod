@@ -1547,7 +1547,11 @@ msgctxt "#31910"
 msgid "Map & Alerts"
 msgstr ""
 
-#empty strings from id 31911 to 31944
+#empty strings from id 31911 to 31943
+
+msgctxt "#31944"
+msgid "Menu Label"
+msgstr ""
 
 msgctxt "#31945"
 msgid "Use Live Backgrounds"

@@ -197,7 +197,6 @@
 						<label2>31172</label2>
 						<onclick>noop</onclick>
 					</item>
-					
 				</content>
 			</control>
 			<control type="image">
@@ -238,9 +237,10 @@
 					<itemgap>-1</itemgap>
 					<pagecontrol>60</pagecontrol>
 					<onleft>9000</onleft>
-<onright condition="!Skin.HasSetting(KioskMode)">60</onright>
+					<onright condition="!Skin.HasSetting(KioskMode)">60</onright>
 					<onright condition="Skin.HasSetting(KioskMode) + Skin.HasSetting(DisableHomeReturnButtons)">9000</onright>
-                    <onright condition="Skin.HasSetting(KioskMode) + !Skin.HasSetting(DisableHomeReturnButtons)">82</onright>					<onup>9001</onup>
+					<onright condition="Skin.HasSetting(KioskMode) + !Skin.HasSetting(DisableHomeReturnButtons)">82</onright>
+					<onup>9001</onup>
 					<ondown>9001</ondown>
 					<control type="label" id="100">
 						<width>750</width>
@@ -297,23 +297,12 @@
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-						
-<!--onclick>Skin.SetPath(UPnP_Path)</onclick-->
-						
-						
+						<!--onclick>Skin.SetPath(UPnP_Path)</onclick-->
 						<onclick>ActivateWindow(2128)</onclick>
-						
-						
 						<enable>Skin.HasSetting(UPnP_Mode)</enable>
 					</control>
-					
-					
-					
-					
-					
-				<!-- Type of server toggle --> 	
-					
-				<control type="button" id="127">
+					<!-- Type of server toggle -->
+					<control type="button" id="127">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -324,7 +313,6 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick condition="IsEmpty(Skin.String(UPnPServer))">Skin.SetString(UPnPServer,XBMC)</onclick>
-						
 						<!--
 						<onclick condition="Skin.String(UPnPServer,USA)">Skin.SetString(UPnPServer,UK)</onclick>
 						<onclick condition="Skin.String(UPnPServer,UK)">Skin.SetString(UPnPServer,Aus)</onclick>
@@ -339,10 +327,7 @@
 						<onclick condition="Skin.String(UPnPServer,NL)">Skin.SetString(UPnPServer,USA)</onclick>
 						-->
 						<enable>Skin.HasSetting(UPnP_Mode)</enable>
-					</control>	
-					
-					
-					
+					</control>
 					<control type="label" id="106">
 						<width>750</width>
 						<height>45</height>
@@ -615,7 +600,6 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					
 					<control type="button" id="127">
 						<width>750</width>
 						<height>40</height>
@@ -6687,7 +6671,6 @@
 						<textcolor>white</textcolor>
 					</control>
 				</control>
-				
 				<control type="grouplist" id="9011">
 					<visible>Container(9000).Hasfocus(6)</visible>
 					<posx>290</posx>
@@ -6747,7 +6730,6 @@
 						<selected>!Skin.HasSetting(SmallVolumeJump)</selected>
 						<enable>!Skin.HasSetting(DisableFloorVolumeButtons)</enable>
 					</control>
-					
 					<control type="label" id="804">
 						<width>750</width>
 						<height>45</height>
@@ -6758,21 +6740,18 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					
-					
-					
 					<control type="radiobutton" id="805">
-                        <width>750</width>
-                        <height>40</height>
-                        <font>font13</font>
-                        <label>31230</label>
-                        <textcolor>grey2</textcolor>
-                        <focusedcolor>white</focusedcolor>
-                        <texturefocus>MenuItemFO.png</texturefocus>
-                        <texturenofocus>MenuItemNF.png</texturenofocus>
-                        <onclick>Skin.ToggleSetting(HideFavouritesBtn)</onclick>
-                        <selected>Skin.HasSetting(HideFavouritesBtn)</selected>
-                    </control>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>31230</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(HideFavouritesBtn)</onclick>
+						<selected>Skin.HasSetting(HideFavouritesBtn)</selected>
+					</control>
 					<control type="radiobutton" id="806">
 						<description>Show Suggested Media</description>
 						<width>750</width>
@@ -6951,8 +6930,6 @@
 					<orientation>vertical</orientation>
 					<visible>Container(9000).Hasfocus(6)</visible>
 				</control>
-								
-				
 				<control type="grouplist" id="9006">
 					<visible>Container(9000).Hasfocus(7)</visible>
 					<posx>290</posx>
@@ -7359,9 +7336,6 @@
 					<orientation>vertical</orientation>
 					<visible>Container(9000).Hasfocus(7)</visible>
 				</control>
-				
-				
-
 			</control>
 		</control>
 		<include>CommonNowPlaying</include>

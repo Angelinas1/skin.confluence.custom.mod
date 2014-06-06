@@ -7,8 +7,7 @@
 			<onup>9000</onup>
 			<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 			<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+			<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 			<control type="group">
 				<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),Videos)</visible>
 				<include>HomeSubMenuCommonAnimation</include>
@@ -44,8 +43,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9010,-1)</onclick>
 					<visible>IntegerGreaterThan(Container(9010).NumItems,5) + Container(9010).HasPrevious</visible>
 				</control>
@@ -73,9 +71,8 @@
 					<onright>9010</onright>
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
-				<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9010,1)</onclick>
 					<animation effect="slide" start="0,0" end="-205,0" time="0" condition="StringCompare(Container(9010).NumItems,4)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9010).NumItems,3)">conditional</animation>
@@ -119,8 +116,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9011,-1)</onclick>
 					<visible>IntegerGreaterThan(Container(9011).NumItems,5) + Container(9011).HasPrevious</visible>
 				</control>
@@ -149,8 +145,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9011,1)</onclick>
 					<animation effect="slide" start="0,0" end="-205,0" time="0" condition="StringCompare(Container(9011).NumItems,4)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9011).NumItems,3)">conditional</animation>
@@ -194,8 +189,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9012,-1)</onclick>
 					<visible>IntegerGreaterThan(Container(9012).NumItems,5) + Container(9012).HasPrevious</visible>
 				</control>
@@ -224,8 +218,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9012,1)</onclick>
 					<animation effect="slide" start="0,0" end="-205,0" time="0" condition="StringCompare(Container(9012).NumItems,4)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9012).NumItems,3)">conditional</animation>
@@ -269,8 +262,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9013,-1)</onclick>
 					<visible>IntegerGreaterThan(Container(9013).NumItems,5) + Container(9013).HasPrevious</visible>
 				</control>
@@ -299,8 +291,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9013,1)</onclick>
 					<animation effect="slide" start="0,0" end="-205,0" time="0" condition="StringCompare(Container(9013).NumItems,4)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9013).NumItems,3)">conditional</animation>
@@ -344,8 +335,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9014,-1)</onclick>
 					<visible>IntegerGreaterThan(Container(9014).NumItems,5) + Container(9014).HasPrevious</visible>
 				</control>
@@ -374,8 +364,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9014,1)</onclick>
 					<animation effect="slide" start="0,0" end="-205,0" time="0" condition="StringCompare(Container(9014).NumItems,4)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9014).NumItems,3)">conditional</animation>
@@ -419,8 +408,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9015,-1)</onclick>
 					<visible>IntegerGreaterThan(Container(9015).NumItems,5) + Container(9015).HasPrevious</visible>
 				</control>
@@ -449,8 +437,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9015,1)</onclick>
 					<animation effect="slide" start="0,0" end="-205,0" time="0" condition="StringCompare(Container(9015).NumItems,4)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9015).NumItems,3)">conditional</animation>
@@ -494,8 +481,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9016,-1)</onclick>
 					<!--onclick condition="system.getbool(input.enablemouse)">Control.Move(9016,1)</onclick-->
 					<visible>IntegerGreaterThan(Container(9016).NumItems,5) + Container(9016).HasPrevious</visible>
@@ -525,8 +511,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9016,1)</onclick>
 					<animation effect="slide" start="0,0" end="-205,0" time="0" condition="StringCompare(Container(9016).NumItems,4)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9016).NumItems,3)">conditional</animation>
@@ -570,8 +555,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9017,-1)</onclick>
 					<visible>IntegerGreaterThan(Container(9017).NumItems,5) + Container(9017).HasPrevious</visible>
 				</control>
@@ -600,8 +584,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9017,1)</onclick>
 					<animation effect="slide" start="0,0" end="-205,0" time="0" condition="StringCompare(Container(9017).NumItems,4)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9017).NumItems,3)">conditional</animation>
@@ -645,8 +628,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9019,-1)</onclick>
 					<visible>IntegerGreaterThan(Container(9019).NumItems,5) + Container(9019).HasPrevious</visible>
 				</control>
@@ -675,8 +657,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9019,1)</onclick>
 					<animation effect="slide" start="0,0" end="-205,0" time="0" condition="StringCompare(Container(9019).NumItems,4)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9019).NumItems,3)">conditional</animation>
@@ -720,8 +701,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9020,-1)</onclick>
 					<visible>IntegerGreaterThan(Container(9020).NumItems,5) + Container(9020).HasPrevious</visible>
 				</control>
@@ -750,8 +730,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9020,1)</onclick>
 					<animation effect="slide" start="0,0" end="-205,0" time="0" condition="StringCompare(Container(9020).NumItems,4)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9020).NumItems,3)">conditional</animation>
@@ -795,8 +774,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9021,-1)</onclick>
 					<visible>IntegerGreaterThan(Container(9021).NumItems,5) + Container(9021).HasPrevious</visible>
 				</control>
@@ -824,9 +802,8 @@
 					<onright>9021</onright>
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
-				<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9021,1)</onclick>
 					<animation effect="slide" start="0,0" end="-205,0" time="0" condition="StringCompare(Container(9021).NumItems,4)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9021).NumItems,3)">conditional</animation>
@@ -870,8 +847,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9022,-1)</onclick>
 					<visible>IntegerGreaterThan(Container(9022).NumItems,5) + Container(9022).HasPrevious</visible>
 				</control>
@@ -900,8 +876,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9022,1)</onclick>
 					<animation effect="slide" start="0,0" end="-205,0" time="0" condition="StringCompare(Container(9022).NumItems,4)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9022).NumItems,3)">conditional</animation>
@@ -945,8 +920,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9023,-1)</onclick>
 					<visible>IntegerGreaterThan(Container(9023).NumItems,5) + Container(9023).HasPrevious</visible>
 				</control>
@@ -975,8 +949,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9023,1)</onclick>
 					<animation effect="slide" start="0,0" end="-205,0" time="0" condition="StringCompare(Container(9023).NumItems,4)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9023).NumItems,3)">conditional</animation>
@@ -1020,8 +993,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9024,-1)</onclick>
 					<visible>IntegerGreaterThan(Container(9024).NumItems,5) + Container(9024).HasPrevious</visible>
 				</control>
@@ -1050,8 +1022,7 @@
 					<onup>9000</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 					<onclick>Control.Move(9024,1)</onclick>
 					<animation effect="slide" start="0,0" end="-205,0" time="0" condition="StringCompare(Container(9024).NumItems,4)">conditional</animation>
 					<animation effect="slide" start="0,0" end="-410,0" time="0" condition="StringCompare(Container(9024).NumItems,3)">conditional</animation>
@@ -1074,8 +1045,7 @@
 		<onup>9000</onup>
 		<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 		<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-            <ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+		<ondown condition="!Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 	</include>
 	<include name="HomeSubMenuCommonAnimation">
 		<animation effect="slide" start="0,-40" end="0,0" delay="200" time="200" tween="quadratic" easing="out">Visible</animation>

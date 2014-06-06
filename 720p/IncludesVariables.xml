@@ -1944,28 +1944,23 @@
 		<value condition="Library.HasContent(Movies)">$INFO[Window(home).Property(LatestMovie.1.Thumb)]</value>
 		<value>DefaultVideoCover.png</value>
 	</variable>
-	
-	
-	
 	<variable name="UPnPServerType" type="text">
-	<!--
+		<!--
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]sources%3a%2f%2fvideo%2f/",return)</value>
-	-->	
+		-->
 		<value>$LOCALIZE[31011]</value>
 	</variable>
-	
-	
-	
-	
 	<variable name="VideoFilesCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]sources%3a%2f%2fvideo%2f/",return)</value>
 		<value>ActivateWindow(Videos,Files,return)</value>
 	</variable>
-	
-	
-	
+	<variable name="VideoPlaylistsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fplaylists.xml%2f/",return)</value>
+		<value>ActivateWindow(special://videoplaylists/,return)</value>
+	</variable>
 	<variable name="MoviesLibraryCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2f/",return)</value>
@@ -2026,7 +2021,6 @@
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fplaylists.xml%2f/",return)</value>
 		<value>ActivateWindow(special://videoplaylists/,return)</value>
 	</variable>
-	
 	<variable name="TVShowLibraryCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2ftvshows%2f/",return)</value>
@@ -2072,7 +2066,6 @@
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2ftvshows%2fyears.xml%2f/",return)</value>
 		<value>ActivateWindow(Videos,videodb://tvshows/years/,return))</value>
 	</variable>
-	
 	<variable name="MusicLibraryCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2f/",return)</value>
@@ -2133,7 +2126,56 @@
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2ftop100%2fsongs%2f/",return)</value>
 		<value>ActivateWindow(musicdb://years/,return)</value>
 	</variable>
-	
+	<variable name="ConcertsLibraryCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2f/",return)</value>
+		<value>ActivateWindow(videodb://musicvideos/,return)</value>
+	</variable>
+	<variable name="ConcertsYearsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2fyears.xml%2f/",return)</value>
+		<value>ActivateWindow(videodb://musicvideos/years/,return)</value>
+	</variable>
+	<variable name="ConcertsTitleCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2ftitles.xml%2f/",return)</value>
+		<value>ActivateWindow(videodb://musicvideos/titles/,return)</value>
+	</variable>
+	<variable name="ConcertsTagsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2ftags.xml%2f/",return)</value>
+		<value>ActivateWindow(videodb://musicvideos/tags/,return)</value>
+	</variable>
+	<variable name="ConcertsStudiosCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2fstudios.xml%2f/",return)</value>
+		<value>ActivateWindow(videodb://musicvideos/studios/,return)</value>
+	</variable>
+	<variable name="ConcertsGenreCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2fgenres.xml%2f/",return)</value>
+		<value>ActivateWindow(videodb://musicvideos/genres/,return)</value>
+	</variable>
+	<variable name="ConcertsDirectorsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2fdirectors.xml%2f/",return)</value>
+		<value>ActivateWindow(videodb://musicvideos/directors/,return)</value>
+	</variable>
+	<variable name="ConcertsArtistsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2fartists.xml%2f/",return)</value>
+		<value>ActivateWindow(videodb://musicvideos/artists/,return)</value>
+	</variable>
+	<variable name="ConcertsAlbumsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2falbums.xml%2f/",return)</value>
+		<value>ActivateWindow(videodb://musicvideos/albums/,return)</value>
+	</variable>
+	<variable name="ConcertsRecentCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedmusicvideos.xml%2f/",return)</value>
+		<value>ActivateWindow(videodb://recentlyaddedmusicvideos/,return)</value>
+	</variable>
 	<!--
 	Not XBMC
 	Pictures  >upnp://1cd4b496-65ab-42c4-94f6-80a56a756168/3/<
@@ -2144,18 +2186,8 @@
 	
 	
 	video files = library%3a%2f%2fvideo%2ffiles.xml%2f/
-	playlists = library%3a%2f%2fvideo%2fplaylists.xml%2f/
+	playlists = 
 	
-	concerts  library%3a%2f%2fvideo%2fmusicvideos%2f/
-	years library%3a%2f%2fvideo%2fmusicvideos%2fyears.xml%2f/
-	title  library%3a%2f%2fvideo%2fmusicvideos%2ftitles.xml%2f/
-	tags  library%3a%2f%2fvideo%2fmusicvideos%2ftags.xml%2f/
-	studios/  library%3a%2f%2fvideo%2fmusicvideos%2fstudios.xml%2f/
-	genre library%3a%2f%2fvideo%2fmusicvideos%2fgenres.xml%2f/
-	directors  library%3a%2f%2fvideo%2fmusicvideos%2fdirectors.xml%2f/
-	artists   library%3a%2f%2fvideo%2fmusicvideos%2fartists.xml%2f/
-	albums library%3a%2f%2fvideo%2fmusicvideos%2falbums.xml%2f/
-	recent added library%3a%2f%2fvideo%2frecentlyaddedmusicvideos.xml%2f/
 	
 	
 	

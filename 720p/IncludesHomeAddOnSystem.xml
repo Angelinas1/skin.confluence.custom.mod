@@ -6,7 +6,6 @@
 			<onup condition="!Skin.HasSetting(RaiseMainMenuBar)">9003</onup>
 			<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
 			<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
 			<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">9004</ondown>
 			<control type="fixedlist" id="700">
 				<animation effect="slide" start="0,0" end="-91,0" time="0" condition="StringCompare(Container(700).NumItems,2) | StringCompare(Container(700).NumItems,4)">conditional</animation>
@@ -16,8 +15,7 @@
 				<onup condition="Skin.HasSetting(RaiseMainMenuBar)">9001</onup>
 				<onup condition="!Skin.HasSetting(RaiseMainMenuBar)">9003</onup>
 				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-			<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 				<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">9004</ondown>
 				<include>HomeAddonsCommonLayout</include>
 				<content>
@@ -32,8 +30,7 @@
 				<onup condition="Skin.HasSetting(RaiseMainMenuBar)">9001</onup>
 				<onup condition="!Skin.HasSetting(RaiseMainMenuBar)">9003</onup>
 				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-			<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 				<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">9004</ondown>
 				<include>HomeAddonsCommonLayout</include>
 				<content>
@@ -48,8 +45,7 @@
 				<onup condition="Skin.HasSetting(RaiseMainMenuBar)">9001</onup>
 				<onup condition="!Skin.HasSetting(RaiseMainMenuBar)">9003</onup>
 				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-			<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 				<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">9004</ondown>
 				<include>HomeAddonsCommonLayout</include>
 				<content>
@@ -64,8 +60,7 @@
 				<onup condition="Skin.HasSetting(RaiseMainMenuBar)">9001</onup>
 				<onup condition="!Skin.HasSetting(RaiseMainMenuBar)">9003</onup>
 				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-			<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 				<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">9004</ondown>
 				<include>HomeAddonsCommonLayout</include>
 				<content>
@@ -80,8 +75,7 @@
 				<onup condition="Skin.HasSetting(RaiseMainMenuBar)">9001</onup>
 				<onup condition="!Skin.HasSetting(RaiseMainMenuBar)">9003</onup>
 				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-			<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 				<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">9004</ondown>
 				<include>HomeAddonsCommonLayout</include>
 				<content>
@@ -96,8 +90,7 @@
 				<onup condition="Skin.HasSetting(RaiseMainMenuBar)">9001</onup>
 				<onup condition="!Skin.HasSetting(RaiseMainMenuBar)">9003</onup>
 				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-			<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 				<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">9004</ondown>
 				<include>HomeAddonsCommonLayout</include>
 				<content>
@@ -112,8 +105,7 @@
 				<onup condition="Skin.HasSetting(RaiseMainMenuBar)">9001</onup>
 				<onup condition="!Skin.HasSetting(RaiseMainMenuBar)">9003</onup>
 				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-			<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 				<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">9004</ondown>
 				<include>HomeAddonsCommonLayout</include>
 				<content>
@@ -128,8 +120,7 @@
 				<onup condition="Skin.HasSetting(RaiseMainMenuBar)">9001</onup>
 				<onup condition="!Skin.HasSetting(RaiseMainMenuBar)">9003</onup>
 				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-			<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 				<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">9004</ondown>
 				<include>HomeAddonsCommonLayout</include>
 				<content>
@@ -144,8 +135,7 @@
 				<onup condition="Skin.HasSetting(RaiseMainMenuBar)">9001</onup>
 				<onup condition="!Skin.HasSetting(RaiseMainMenuBar)">9003</onup>
 				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-			<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 				<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">9004</ondown>
 				<include>HomeAddonsCommonLayout</include>
 				<content>
@@ -160,8 +150,7 @@
 				<onup condition="Skin.HasSetting(RaiseMainMenuBar)">9001</onup>
 				<onup condition="!Skin.HasSetting(RaiseMainMenuBar)">9003</onup>
 				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + !Skin.HasSetting(HideFavouritesBtn)">21</ondown>
-			<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
-
+				<ondown condition="Skin.HasSetting(RaiseMainMenuBar) + Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</ondown>
 				<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">9004</ondown>
 				<include>HomeAddonsCommonLayout</include>
 				<content>
