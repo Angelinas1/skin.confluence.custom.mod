@@ -1945,15 +1945,12 @@
 		<value>DefaultVideoCover.png</value>
 	</variable>
 	<variable name="UPnPServerType" type="text">
-		<!--
-		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
-		<value condition="Skin.HasSetting(UPnP_Mode)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]sources%3a%2f%2fvideo%2f/",return)</value>
-		-->
 		<value>$LOCALIZE[31011]</value>
 	</variable>
 	<variable name="VideoFilesCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]sources%3a%2f%2fvideo%2f/",return)</value>
+		<!--  library%3a%2f%2fvideo%2ffiles.xml%2f/  -->
 		<value>ActivateWindow(Videos,Files,return)</value>
 	</variable>
 	<variable name="VideoPlaylistsCmd" type="text">
@@ -1971,6 +1968,8 @@
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2ftitles.xml%2f/",return)</value>
 		<value>ActivateWindow(videodb://movies/titles/,return)</value>
 	</variable>
+	
+	
 	<variable name="MoviesActorsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2126)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(videolibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2factors.xml%2f/",return)</value>
@@ -2177,6 +2176,7 @@
 		<value>ActivateWindow(videodb://recentlyaddedmusicvideos/,return)</value>
 	</variable>
 	<!--
+	
 	Not XBMC
 	Pictures  >upnp://1cd4b496-65ab-42c4-94f6-80a56a756168/3/<
 			  >upnp://1cd4b496-65ab-42c4-94f6-80a56a756168/2/<
@@ -2186,7 +2186,7 @@
 	
 	
 	video files = library%3a%2f%2fvideo%2ffiles.xml%2f/
-	playlists = 
+	
 	
 	
 	
