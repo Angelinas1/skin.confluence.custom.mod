@@ -314,17 +314,9 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick condition="IsEmpty(Skin.String(UPnPServer))">Skin.SetString(UPnPServer,XBMC)</onclick>
 						<!--
-						<onclick condition="Skin.String(UPnPServer,USA)">Skin.SetString(UPnPServer,UK)</onclick>
-						<onclick condition="Skin.String(UPnPServer,UK)">Skin.SetString(UPnPServer,Aus)</onclick>
-						<onclick condition="Skin.String(UPnPServer,Aus)">Skin.SetString(UPnPServer,Bra)</onclick>
-						<onclick condition="Skin.String(UPnPServer,Bra)">Skin.SetString(UPnPServer,Can)</onclick>
-						<onclick condition="Skin.String(UPnPServer,Can)">Skin.SetString(UPnPServer,DK)</onclick>
-						<onclick condition="Skin.String(UPnPServer,DK)">Skin.SetString(UPnPServer,DE)</onclick>
-						<onclick condition="Skin.String(UPnPServer,DE)">Skin.SetString(UPnPServer,HK)</onclick>
-						<onclick condition="Skin.String(UPnPServer,HK)">Skin.SetString(UPnPServer,Ire)</onclick>
-						<onclick condition="Skin.String(UPnPServer,Ire)">Skin.SetString(UPnPServer,Jpn)</onclick>
-						<onclick condition="Skin.String(UPnPServer,Jpn)">Skin.SetString(UPnPServer,NL)</onclick>
-						<onclick condition="Skin.String(UPnPServer,NL)">Skin.SetString(UPnPServer,USA)</onclick>
+						<onclick condition="Skin.String(UPnPServer,XBMC)">Skin.SetString(UPnPServer,WinHomeServer)</onclick>
+						
+						<onclick condition="Skin.String(UPnPServer,WinHomeServer)">Skin.SetString(UPnPServer,XBMC)</onclick>
 						-->
 						<enable>Skin.HasSetting(UPnP_Mode)</enable>
 					</control>
