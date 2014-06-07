@@ -139,6 +139,16 @@
 				<visible>Control.HasFocus(8003)</visible>
 			</control>
 			<control type="image">
+				<description>Recently Added Concerts Background Image</description>
+				<include>Dimensions_Fullscreen</include>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$INFO[Container(8020).ListItem.Thumb]</texture>
+				<include>BackgroundFade</include>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<include>Window_OpenClose_Animation</include>
+				<visible>Control.HasFocus(8020)</visible>
+			</control>
+			<control type="image">
 				<description>Random Movies Background Image</description>
 				<include>Dimensions_Fullscreen</include>
 				<aspectratio>scale</aspectratio>
@@ -209,6 +219,16 @@
 				<visible>Control.HasFocus(8007)</visible>
 			</control>
 			<control type="image">
+				<description>Random Concerts Background Image</description>
+				<include>Dimensions_Fullscreen</include>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$INFO[Container(8024).ListItem.Thumb]</texture>
+				<include>BackgroundFade</include>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<include>Window_OpenClose_Animation</include>
+				<visible>Control.HasFocus(8024)</visible>
+			</control>
+			<control type="image">
 				<description>Suggested Movies Background Image</description>
 				<include>Dimensions_Fullscreen</include>
 				<aspectratio>scale</aspectratio>
@@ -277,6 +297,16 @@
 				<fadetime>FanartCrossfadeTime</fadetime>
 				<include>Window_OpenClose_Animation</include>
 				<visible>Control.HasFocus(8011)</visible>
+			</control>
+			<control type="image">
+				<description>Suggested Concerts Background Image</description>
+				<include>Dimensions_Fullscreen</include>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$INFO[Container(8028).ListItem.Thumb]</texture>
+				<include>BackgroundFade</include>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<include>Window_OpenClose_Animation</include>
+				<visible>Control.HasFocus(8028)</visible>
 			</control>
 			<control type="image">
 				<description>Playlist Movies Background Image</description>
