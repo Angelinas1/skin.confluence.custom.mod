@@ -314,30 +314,12 @@
 				<property name="Background">$INFO[Skin.String(HomeItem.1.Live)]</property>
 				<visible>!IsEmpty(Skin.String(HomeItemLastAction)) + Skin.HasSetting(StickyHomeMenuAction)</visible>
 			</item>
-			
-			
-		<!--	
-			
-			
-		want to run $VAR[MusicLibraryCmd]
-
-				so onclick = $VAR[$INFO[Skin.String(HomeTest.2.Path)]]
-			
-			
-			
-			
-		-->	
-			
 			<item id="2">
 				<description>Home Menu Item Two</description>
-				<label>Test $INFO[Skin.String(HomeItem.2.Label)]</label>
+				<label>$INFO[Skin.String(HomeItem.2.Label)]</label>
 				<onclick>SetProperty(MenuItemActive,ItemTwo,Home)</onclick>
 				<onclick>SetProperty(MenuItemSelected,$INFO[Skin.String(HomeItem.2.Type)],Home)</onclick>
-				<!--onclick>$INFO[Skin.String(HomeItem.2.Path)]</onclick-->
-				
-				
-				<onclick>$VAR[MoviesTitleCmd]</onclick>
-				
+				<onclick>$INFO[Skin.String(HomeItem.2.Path)]</onclick>
 				<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
 				<thumb>$INFO[Skin.String(HomeItem.2.FanArt)]</thumb>
 				<property name="SubMenu">$INFO[Skin.String(HomeItem.2.Sub)]</property>
