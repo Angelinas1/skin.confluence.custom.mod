@@ -262,14 +262,6 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<label>31336</label>
 						<onclick>ActivateWindow(2127)</onclick>
-						<!-- Put below into Yes on Custom window -->
-						<!--
-						<onclick>Skin.SetBool(ToggleUPnPMode)</onclick>
-						<onclick>Skin.Reset(UPnP_Path)</onclick>
-						<onclick>Skin.Reset(UPnP_Mode)</onclick>
-						<onclick>Dialog.Close(all)</onclick>
-						<onclick>ActivateWindow(home)</onclick>
-						-->
 						<selected>Skin.HasSetting(UPnP_Mode)</selected>
 						<visible>Skin.HasSetting(UPnP_Mode)</visible>
 					</control>
@@ -302,7 +294,7 @@
 						<enable>Skin.HasSetting(UPnP_Mode)</enable>
 					</control>
 					<!-- Type of server toggle -->
-					<control type="button" id="127">
+					<control type="button" id="105">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -315,7 +307,6 @@
 						<onclick condition="IsEmpty(Skin.String(UPnPServer))">Skin.SetString(UPnPServer,XBMC)</onclick>
 						<!--
 						<onclick condition="Skin.String(UPnPServer,XBMC)">Skin.SetString(UPnPServer,WinHomeServer)</onclick>
-						
 						<onclick condition="Skin.String(UPnPServer,WinHomeServer)">Skin.SetString(UPnPServer,XBMC)</onclick>
 						-->
 						<enable>Skin.HasSetting(UPnP_Mode)</enable>
