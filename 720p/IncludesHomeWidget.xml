@@ -15,7 +15,7 @@
 				<top>50</top>
 				<visible>Library.HasContent(Movies)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentMovies)</visible>
-				<visible>!Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8000).NumItems,0)</visible>
+				<visible>!Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -170,7 +170,7 @@
 				<top>75</top>
 				<visible>Library.HasContent(Movies)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentMovies)</visible>
-				<visible>Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8017).NumItems,0)</visible>
+				<visible>Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
@@ -282,7 +282,7 @@
 				<top>50</top>
 				<visible>Library.HasContent(TVShows)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentEpisodes)</visible>
-				<visible>!Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8001).NumItems,0)</visible>
+				<visible>!Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -523,7 +523,7 @@
 				<top>75</top>
 				<visible>Library.HasContent(TVShows)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentEpisodes)</visible>
-				<visible>Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8018).NumItems,0)</visible>
+				<visible>Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
@@ -755,7 +755,7 @@
 				<top>50</top>
 				<visible>Library.HasContent(Music)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentAlbums)</visible>
-				<visible>!Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8002).NumItems,0)</visible>
+				<visible>!Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -938,7 +938,7 @@
 				<posy>75</posy>
 				<visible>Library.HasContent(Music)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentAlbums)</visible>
-				<visible>Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8019).NumItems,0)</visible>
+				<visible>Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
@@ -1116,7 +1116,7 @@
 				<top>50</top>
 				<visible>Library.HasContent(MusicVideos)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentConcerts)</visible>
-				<visible>!Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8003).NumItems,0)</visible>
+				<visible>!Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -1271,7 +1271,7 @@
 				<top>75</top>
 				<visible>Library.HasContent(MusicVideos)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentConcerts)</visible>
-				<visible>Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8020).NumItems,0)</visible>
+				<visible>Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
@@ -1383,7 +1383,7 @@
 				<top>50</top>
 				<visible>Library.HasContent(Movies)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomMovies)</visible>
-				<visible>!Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8004).NumItems,0)</visible>
+				<visible>!Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -1538,7 +1538,7 @@
 				<top>75</top>
 				<visible>Library.HasContent(Movies)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomMovies)</visible>
-				<visible>Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8021).NumItems,0)</visible>
+				<visible>Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
@@ -1650,7 +1650,7 @@
 				<top>50</top>
 				<visible>Library.HasContent(TVShows)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomEpisodes)</visible>
-				<visible>!Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8005).NumItems,0)</visible>
+				<visible>!Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -1891,7 +1891,7 @@
 				<top>75</top>
 				<visible>Library.HasContent(TVShows)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomEpisodes)</visible>
-				<visible>Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8022).NumItems,0)</visible>
+				<visible>Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
@@ -2123,7 +2123,7 @@
 				<top>50</top>
 				<visible>Library.HasContent(Music)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomAlbums)</visible>
-				<visible>!Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8006).NumItems,0)</visible>
+				<visible>!Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -2306,7 +2306,7 @@
 				<posy>75</posy>
 				<visible>Library.HasContent(Music)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomAlbums)</visible>
-				<visible>Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8023).NumItems,0)</visible>
+				<visible>Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
@@ -2484,7 +2484,7 @@
 				<top>50</top>
 				<visible>Library.HasContent(MusicVideos)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomConcerts)</visible>
-				<visible>!Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8007).NumItems,0)</visible>
+				<visible>!Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -2639,7 +2639,7 @@
 				<top>75</top>
 				<visible>Library.HasContent(MusicVideos)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomConcerts)</visible>
-				<visible>Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8024).NumItems,0)</visible>
+				<visible>Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
@@ -2751,7 +2751,7 @@
 				<top>50</top>
 				<visible>Library.HasContent(Movies)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedMovies)</visible>
-				<visible>!Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8008).NumItems,0)</visible>
+				<visible>!Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -2906,7 +2906,7 @@
 				<top>75</top>
 				<visible>Library.HasContent(Movies)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedMovies)</visible>
-				<visible>Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8025).NumItems,0)</visible>
+				<visible>Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
@@ -3018,7 +3018,7 @@
 				<top>50</top>
 				<visible>Library.HasContent(TVShows)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedEpisodes)</visible>
-				<visible>!Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8009).NumItems,0)</visible>
+				<visible>!Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -3259,7 +3259,7 @@
 				<top>75</top>
 				<visible>Library.HasContent(TVShows)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedEpisodes)</visible>
-				<visible>Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8026).NumItems,0)</visible>
+				<visible>Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
@@ -3491,7 +3491,7 @@
 				<top>50</top>
 				<visible>Library.HasContent(Music)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedAlbums)</visible>
-				<visible>!Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8010).NumItems,0)</visible>
+				<visible>!Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -3674,7 +3674,7 @@
 				<posy>75</posy>
 				<visible>Library.HasContent(Music)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedAlbums)</visible>
-				<visible>Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8027).NumItems,0)</visible>
+				<visible>Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
@@ -3852,7 +3852,7 @@
 				<top>50</top>
 				<visible>Library.HasContent(MusicVideos)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedConcerts)</visible>
-				<visible>!Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8011).NumItems,0)</visible>
+				<visible>!Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -4007,7 +4007,7 @@
 				<top>75</top>
 				<visible>Library.HasContent(MusicVideos)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedConcerts)</visible>
-				<visible>Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8028).NumItems,0)</visible>
+				<visible>Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
@@ -4120,7 +4120,10 @@
 				<!-- Movies Playlist-->
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),PlayListVideo) + !Skin.HasSetting(DisableScriptPlayList)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(PlayListType),Movie)</visible>
-				<visible>!Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8012).NumItems,0)</visible>
+				<!--visible>!Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8012).NumItems,0)</visible-->
+				
+				<visible>!Skin.HasSetting(EnableLargeWidget)</visible>
+				
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Recent Title label</description>
@@ -4723,7 +4726,7 @@
 				<!-- Episodes Playlist-->
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),PlayListVideo) + !Skin.HasSetting(DisableScriptPlayList)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(PlayListType),Episode)</visible>
-				<visible>!Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8013).NumItems,0)</visible>
+				<visible>!Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Random Title label</description>
@@ -5024,7 +5027,7 @@
 				<top>75</top>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),PlayListVideo) + !Skin.HasSetting(DisableScriptPlayList)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(PlayListType),Episode)</visible>
-				<visible>Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8030).NumItems,0)</visible>
+				<visible>Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>
@@ -5314,7 +5317,7 @@
 				<!-- UnWatched Movies Widget-->
 				<visible>Library.HasContent(Movies) + !Skin.HasSetting(DisableScriptPlayList)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),UnWatched)</visible>
-				<visible>!Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8014).NumItems,0)</visible>
+				<visible>!Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Random Title label</description>
@@ -5469,7 +5472,7 @@
 				<top>75</top>
 				<visible>Library.HasContent(Movies) + !Skin.HasSetting(DisableScriptPlayList)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),UnWatched)</visible>
-				<visible>Skin.HasSetting(EnableLargeWidget) + IntegerGreaterThan(Container(8031).NumItems,0)</visible>
+				<visible>Skin.HasSetting(EnableLargeWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>background</description>

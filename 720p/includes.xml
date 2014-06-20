@@ -1971,7 +1971,7 @@
 			<include>Window_OpenClose_Animation</include>
 			<include>VisibleFadeEffect</include>
 			<visible>IsEmpty(Player.Art(fanart)) | Skin.HasSetting(HideVisualizationFanart) | !IsEmpty(Skin.String(PhysicalMusicFolder))</visible>
-			<visible>Window.IsVisible(home) | !Skin.HasSetting(AllowSlideShowArt)</visible>
+			<visible>Window.IsVisible(home)</visible>
 			<control type="image">
 				<description>Default Global Background Image</description>
 				<include>Dimensions_Fullscreen</include>
