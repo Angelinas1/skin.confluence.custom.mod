@@ -508,10 +508,6 @@
 				[Player.HasAudio + IsEmpty(MusicPlayer.Property(Fanart_Image)) + !Skin.HasSetting(ShowBackgroundAlbumWall)] |
 				[!Player.HasAudio + Skin.HasSetting(GlobalCDwallBackdrop)]
 			</visible>
-			
-			
-			
-			
 			<posx>-35</posx>
 			<posy>-15</posy>
 			<control type="image">
