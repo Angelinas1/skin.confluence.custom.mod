@@ -647,5 +647,13 @@
 			</control>
 		</control>
 		<include>UserLocalInfo</include>
+			<control type="videowindow">
+				<left>470</left>
+				<top>480</top>
+				<width>170</width>
+				<height>95</height>
+				<visible>Player.HasVideo + !Skin.HasSetting(RaiseMainMenuBar)</visible>
+				<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
+			</control>
 	</controls>
 </window>
