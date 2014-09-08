@@ -11,8 +11,10 @@
 	<include file="ViewsFileMode.xml" />
 	<include file="ViewsPictures.xml" />
 	<include file="ViewsAddonBrowser.xml" />
-	<include file="ViewsLiveTV.xml" />
-	<include file="ViewsPVR.xml" />
+	<include file="IncludesPVR.xml"/>
+	<include file="ViewsLiveTV.xml"/>
+	<include file="ViewsPVRGuide.xml"/>
+	<include file="ViewsPVR.xml"/>
 	<include file="IncludesMenuContentItems.xml" />
 	<include file="IncludesCodecFlagging.xml" />
 	<include file="IncludesHomeWidget.xml" />
@@ -83,7 +85,7 @@
 		<onload>Skin.SetString(HomeItem.2.Type,Pictures)</onload>
 		<onload>Skin.SetString(HomeItem.2.Fanart,special://skin/backgrounds/homescreen/pictures.jpg)</onload>
 		<onload condition="System.GetBool(pvrmanager.enabled)">Skin.SetString(HomeItem.3.Label,$LOCALIZE[31502])</onload>
-		<onload condition="System.GetBool(pvrmanager.enabled)">Skin.SetString(HomeItem.3.Path,ActivateWindow(PVR))</onload>
+		<onload condition="System.GetBool(pvrmanager.enabled)">Skin.SetString(HomeItem.3.Path,ActivateWindow(TVChannels))</onload>
 		<onload condition="System.GetBool(pvrmanager.enabled)">Skin.SetString(HomeItem.3.Sub,LiveTV)</onload>
 		<onload condition="System.GetBool(pvrmanager.enabled)">Skin.SetString(HomeItem.3.Addon,None)</onload>
 		<onload condition="System.GetBool(pvrmanager.enabled)">Skin.SetString(HomeItem.3.Widget,None)</onload>
@@ -556,7 +558,7 @@
 		<control type="image">
 			<description>LOGO</description>
 			<posx>15</posx>
-			<posy>50</posy>
+			<posy>0</posy>
 			<width>220</width>
 			<height>80</height>
 			<aspectratio>keep</aspectratio>
@@ -1661,7 +1663,7 @@
 		<posy>0</posy>
 		<width>1280</width>
 		<height>720</height>
-		<visible>!Control.IsVisible(10) | Window.IsVisible(home)</visible>
+
 	</include>
 	<include name="VideoBoxDimensions">
 		<posx>26</posx>
