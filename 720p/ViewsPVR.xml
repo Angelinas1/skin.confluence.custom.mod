@@ -251,8 +251,8 @@
 				<height>541</height>
 				<onleft>32</onleft>
 				<onright>70</onright>
-				<onup>11</onup>
-				<ondown>11</ondown>
+				<onup>50</onup>
+				<ondown>50</ondown>
 				<viewtype label="old.list">list</viewtype>
 				<pagecontrol>70</pagecontrol>
 				<scrolltime>200</scrolltime>
@@ -349,7 +349,7 @@
 						<width>390</width>
 						<height>61</height>
 						<texture border="2">MenuItemNF.png</texture>
-						<visible>!Control.HasFocus(11)</visible>
+						<visible>!Control.HasFocus(50)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
@@ -358,7 +358,7 @@
 						<width>390</width>
 						<height>61</height>
 						<texture border="2">MenuItemFO.png</texture>
-						<visible>Control.HasFocus(11)</visible>
+						<visible>Control.HasFocus(50)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="label">
