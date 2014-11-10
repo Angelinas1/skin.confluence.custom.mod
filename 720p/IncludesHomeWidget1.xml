@@ -3126,7 +3126,7 @@
 				<animation condition="Control.HasFocus(8016)" effect="slide" start="0,0" end="0,30" time="1000">Conditional</animation>
 					<posx>10</posx>
 					<posy>330</posy>
-					<width>1290</width>
+					<width>1500</width>
 					<height>260</height>
 					<onleft>8818</onleft>
 					<onright>8818</onright>
@@ -3257,7 +3257,7 @@
 							<visible>true</visible>
 						</control>
 					</focusedlayout>
-			 	 <include>RecentVideoContent</include>
+			 	 <include>Favourites3Content</include>
 				</control>
 				<control type="list" id="8817">
 				<animation condition="true" effect="zoom" center="auto" start="100" end="110" time="1000">Focus</animation>
@@ -3266,7 +3266,7 @@
 			        <animation condition="Control.HasFocus(8016)" effect="slide" start="0,0" end="0,30" time="1000">Conditional</animation>
 					<posx>10</posx>
 					<posy>205</posy>
-					<width>1290</width>
+					<width>1500</width>
 					<height>260</height>
 					<onleft>8817</onleft>
 					<onright>8817</onright>
@@ -3383,7 +3383,7 @@
 							<visible>!Control.HasFocus(8817)</visible>
 						</control>
 					</focusedlayout>
-					<include>FavouritesContent</include>
+					<include>Favourites2Content</include>
 				</control>
 				<control type="list" id="8016">
 				<animation condition="true" effect="zoom" center="auto" start="100" end="110" time="1000">Focus</animation>
@@ -3392,7 +3392,7 @@
 				<animation condition="Control.HasFocus(8818)" effect="slide" start="0,0" end="0,0" time="1000">Conditional</animation>
 					<posx>10</posx>
 					<posy>75</posy>
-					<width>1290</width>
+					<width>1500</width>
 					<height>260</height>
 					<onleft>8016</onleft>
 					<onright>8016</onright>
@@ -7885,6 +7885,80 @@
 			<icon>special://skin/backgrounds/Fire.jpg</icon>
 			<thumb>$INFO[Skin.String(AddonSetFour.5.icon)]</thumb>
 			<visible>!IsEmpty(Skin.String(AddonSetFour.5.Path))</visible>
+		</item>		
+		</content>
+	</include>
+	<include name="Favourites3Content">
+	<content>	
+		<item>
+			<label>$INFO[Skin.String(AddonSetFive.1.Label)]</label>
+			<onclick>$INFO[Skin.String(AddonSetFive.1.Path)]</onclick>
+			<icon>special://skin/backgrounds/Fire.jpg</icon>
+			<thumb>$INFO[Skin.String(AddonSetFive.1.icon)]</thumb>
+			<visible>!IsEmpty(Skin.String(AddonSetFive.1.Path))</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(AddonSetFive.2.Label)]</label>
+			<onclick>$INFO[Skin.String(AddonSetFive.2.Path)]</onclick>
+			<icon>special://skin/backgrounds/Fire.jpg</icon>
+			<thumb>$INFO[Skin.String(AddonSetFive.2.icon)]</thumb>
+			<visible>!IsEmpty(Skin.String(AddonSetFive.2.Path))</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(AddonSetFive.3.Label)]</label>
+			<onclick>$INFO[Skin.String(AddonSetFive.3.Path)]</onclick>
+			<icon>special://skin/backgrounds/Fire.jpg</icon>
+			<thumb>$INFO[Skin.String(AddonSetFive.3.icon)]</thumb>
+			<visible>!IsEmpty(Skin.String(AddonSetFive.3.Path))</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(AddonSetFive.4.Label)]</label>
+			<onclick>$INFO[Skin.String(AddonSetFive.4.Path)]</onclick>
+			<icon>special://skin/backgrounds/Fire.jpg</icon>
+			<thumb>$INFO[Skin.String(AddonSetFive.4.icon)]</thumb>
+			<visible>!IsEmpty(Skin.String(AddonSetFive.4.Path))</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(AddonSetFive.5.Label)]</label>
+			<onclick>$INFO[Skin.String(AddonSetFive.5.Path)]</onclick>
+			<icon>special://skin/backgrounds/Fire.jpg</icon>
+			<thumb>$INFO[Skin.String(AddonSetFive.5.icon)]</thumb>
+			<visible>!IsEmpty(Skin.String(AddonSetFive.5.Path))</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(AddonSetSix.1.Label)]</label>
+			<onclick>$INFO[Skin.String(AddonSetSix.1.Path)]</onclick>
+			<icon>special://skin/backgrounds/Fire.jpg</icon>
+			<thumb>$INFO[Skin.String(AddonSetSix.1.icon)]</thumb>
+			<visible>!IsEmpty(Skin.String(AddonSetSix.1.Path))</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(AddonSetSix.2.Label)]</label>
+			<onclick>$INFO[Skin.String(AddonSetSix.2.Path)]</onclick>
+			<icon>special://skin/backgrounds/Fire.jpg</icon>
+			<thumb>$INFO[Skin.String(AddonSetSix.2.icon)]</thumb>
+			<visible>!IsEmpty(Skin.String(AddonSetSix.2.Path))</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(AddonSetSix.3.Label)]</label>
+			<onclick>$INFO[Skin.String(AddonSetSix.3.Path)]</onclick>
+			<icon>special://skin/backgrounds/Fire.jpg</icon>
+			<thumb>$INFO[Skin.String(AddonSetSix.3.icon)]</thumb>
+			<visible>!IsEmpty(Skin.String(AddonSetSix.3.Path))</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(AddonSetSix.4.Label)]</label>
+			<onclick>$INFO[Skin.String(AddonSetSix.4.Path)]</onclick>
+			<icon>special://skin/backgrounds/Fire.jpg</icon>
+			<thumb>$INFO[Skin.String(AddonSetSix.4.icon)]</thumb>
+			<visible>!IsEmpty(Skin.String(AddonSetSix.4.Path))</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(AddonSetSix.5.Label)]</label>
+			<onclick>$INFO[Skin.String(AddonSetSix.5.Path)]</onclick>
+			<icon>special://skin/backgrounds/Fire.jpg</icon>
+			<thumb>$INFO[Skin.String(AddonSetSix.5.icon)]</thumb>
+			<visible>!IsEmpty(Skin.String(AddonSetSix.5.Path))</visible>
 		</item>		
 		</content>
 	</include>
