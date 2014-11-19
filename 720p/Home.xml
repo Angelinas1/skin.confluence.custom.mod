@@ -36,8 +36,8 @@
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
-		<include condition="!Skin.HasSetting(HideNowPlayingInfo)">MediaNowPlaying</include>
 		<include>HomeWidgetPanel</include>
+		<include condition="!Skin.HasSetting(HideNowPlayingInfo)">MediaNowPlaying</include>
 		<control type="button" id="9003">
 			<posx>-20</posx>
 			<posy>-20</posy>
@@ -647,13 +647,5 @@
 			</control>
 		</control>
 		<include>UserLocalInfo</include>
-			<control type="videowindow">
-				<left>470</left>
-				<top>480</top>
-				<width>170</width>
-				<height>95</height>
-				<visible>Player.HasVideo + !Skin.HasSetting(RaiseMainMenuBar)</visible>
-				<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
-			</control>
 	</controls>
 </window>

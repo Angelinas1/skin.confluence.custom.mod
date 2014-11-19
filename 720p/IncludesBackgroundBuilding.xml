@@ -2,6 +2,7 @@
 <includes>
 	<include name="CommonBackground">
 		<control type="group">
+				<visible>!Control.IsVisible(5733)</visible>
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
 				<imagepath background="true">$VAR[HomeMenuItemBackground]</imagepath>
@@ -317,9 +318,10 @@
 			<include>Dimensions_Fullscreen</include>
 			<texture>media-overlay.jpg</texture>
 			<visible>!Skin.HasSetting(EnableMinSpec)</visible>
-			<visible>Player.HasVideo + ![Window.IsVisible(PVR) + [Control.IsVisible(11) | Control.IsVisible(12)]]</visible>
+			<visible>Player.HasVideo + ![Window.IsVisible(PVR)]</visible>
 			<include>VisibleFadeEffect</include>
 		</control>
+
 		<control type="group">
 			<include condition="!Skin.HasSetting(HideBackGroundFanart)">MusicPlayingBottom</include>
 			<control type="visualisation">
@@ -332,7 +334,7 @@
 		<control type="videowindow">
 			<include>Dimensions_Fullscreen</include>
 			<visible>!Skin.HasSetting(EnableMinSpec)</visible>
-			<visible>Player.HasVideo + ![Control.IsVisible(11) | !Control.IsVisible(12)]]</visible>
+			<visible>Player.HasVideo + ![Window.IsVisible(PVR)]</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -625,9 +627,9 @@
 	<include name="ContentPanelBackgroundsPVR">
 		<control type="image">
 			<posx>0</posx>
-			<posy>100r</posy>
+			<posy>20r</posy>
 			<width>1280</width>
-			<height>100</height>
+			<height>200</height>
 			<aspectratio>stretch</aspectratio>
 			<include>VisibleFadeEffect</include>
 			<texture>floor.png</texture>
