@@ -335,7 +335,6 @@
 			<include>Dimensions_Fullscreen</include>
 			<visible>!Skin.HasSetting(EnableMinSpec)</visible>
 			<visible>Player.HasVideo + ![Window.IsVisible(PVR)]</visible>
-			<visible>Player.HasVideo + !Control.IsVisible(10)</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
