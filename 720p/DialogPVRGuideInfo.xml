@@ -182,7 +182,7 @@
 						<label>Writer:</label>
 					</control>
 					<control type="button">
-						<description>Genre value</description>
+						<description>Writer value</description>
 						<posx>90</posx>
 						<posy>105</posy>
 						<width>320</width>

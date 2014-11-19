@@ -316,9 +316,9 @@
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture>media-overlay.jpg</texture>
+			<texture>$INFO[Container(5734).ListItem.PlotOutline]</texture>
 			<visible>!Skin.HasSetting(EnableMinSpec)</visible>
-			<visible>Player.HasVideo + ![Window.IsVisible(PVR)]</visible>
+			<visible>Player.HasVideo + Control.IsVisible(5734)</visible>
 			<include>VisibleFadeEffect</include>
 		</control>
 

@@ -1089,7 +1089,7 @@
 	<visible>Control.IsVisible(5737)</visible>
 	</control>
 	<control type="label"><!-- Nome do canal -->
-	<posx>560</posx>
+	<posx>780</posx>
 	<posy>500</posy>
 	<width>200</width>
 	<height>20</height>
@@ -1127,10 +1127,20 @@
 	<align>left</align>
 	<texture flipx="true">divider.png</texture>
 	</control>
+	<control type="image" id="22">
+		<description>Genre</description>
+		<posx>315</posx>
+		<posy>450</posy>
+		<width>150</width>
+		<height>30</height>
+		<aspectratio>stretch</aspectratio>
+		<texture border="3">genres/$INFO[ListItem.Genre].png</texture>
+		<colordiffuse>50FFFAF0</colordiffuse>	
+	</control>	
 	<control type="label"><!-- Genero -->
 	<posx>315</posx>
 	<posy>450</posy>
-	<width>625</width>
+	<width>160</width>
 	<height>20</height>
 	<align>left</align>
 	<textcolor>grey2</textcolor>
@@ -1174,10 +1184,20 @@
 	<align>left</align>
 	<texture flipx="true">divider.png</texture>
 	</control>
+	<control type="image" id="23">
+		<description>Genre</description>
+		<posx>585</posx>
+		<posy>450</posy>
+		<width>150</width>
+		<height>30</height>
+		<aspectratio>stretch</aspectratio>
+		<texture border="3">genres/$INFO[ListItem.NextGenre].png</texture>
+		<colordiffuse>50FFFAF0</colordiffuse>	
+	</control>	
 	<control type="label"><!-- Genero -->
 	<posx>585</posx>
 	<posy>450</posy>
-	<width>625</width>
+	<width>160</width>
 	<height>20</height>
 	<align>left</align>
 	<textcolor>grey2</textcolor>

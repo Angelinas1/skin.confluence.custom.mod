@@ -3099,278 +3099,66 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>-30</posx>
-				<posy>0</posy>
+				<posx>160</posx>
+				<posy>50</posy>
 				<visible>IntegerGreaterThan(Window(Home).Property(favourite.count),0)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),Favourites)</visible>
 				<include>VisibleFadeEffect</include>
-				<animation condition="true" effect="zoom" center="auto" start="80" end="75" time="1000">Conditional</animation>
 				<control type="label">
 					<description>Title label</description>
-					<posx>90</posx>
-					<posy>15</posy>
+					<posx>240</posx>
+					<posy>-35</posy>
 					<height>20</height>
 					<width>480</width>
 					<label>$LOCALIZE[1036]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font14_title</font>
+					<font>font12_title</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<visible>IntegerGreaterThan(Container(8818).NumItems,0)</visible>
+					<visible>IntegerGreaterThan(Container(8016).NumItems,0)</visible>
 				</control>
-				<control type="list" id="8818">
-				<animation condition="true" effect="zoom" center="auto" start="100" end="110" time="1000">Focus</animation>
-				<animation condition="Control.HasFocus(8818)" effect="slide" start="0,0" end="0,30" time="1000">Conditional</animation>
-                <animation condition="Control.HasFocus(8817)" effect="slide" start="0,0" end="0,30" time="1000">Conditional</animation>
-				<animation condition="Control.HasFocus(8016)" effect="slide" start="0,0" end="0,30" time="1000">Conditional</animation>
-					<posx>10</posx>
-					<posy>330</posy>
-					<width>1500</width>
-					<height>260</height>
-					<onleft>8818</onleft>
-					<onright>8818</onright>
-					<onup>8817</onup>
+				<control type="list" id="8016">
+					<animation effect="slide" start="0,0" end="120,0" time="0" condition="StringCompare(Container(8016).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="240,0" time="0" condition="StringCompare(Container(8016).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="360,0" time="0" condition="StringCompare(Container(8016).NumItems,1)">conditional</animation>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>960</width>
+					<height>240</height>
+					<onleft>8016</onleft>
+					<onright>8016</onright>
+					<onup>21</onup>
 					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9004</ondown>
 					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<orientation>Horizontal</orientation>
-				    <camera x="1340" y="380" />
-                    <animation effect="rotatey" center="50" start="10" end="10" time="0" condition="true">Conditional</animation>
 					<focusposition>1</focusposition>
 					<movement>2</movement>
-                      <itemlayout height="160" width="215">
+					<itemlayout height="220" width="240">
 						<control type="image">
 							<description>background</description>
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>215</width>
-							<height>160</height>
+							<width>240</width>
+							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
 						</control>
 						<control type="image">
 							<posx>10</posx>
 							<posy>10</posy>
-							<width>195</width>
-							<height>140</height>
-							  <aspectratio scalediffuse="false">stretch</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-						</control>
-							<control type="image">
-							<posx>5</posx>
-							<posy>155</posy>
-							<width>195</width>
-							<height>95</height>
-							  <aspectratio scalediffuse="false">stretch</aspectratio>						
-							<texture background="true" flipy="true">$INFO[ListItem.Icon]</texture>
-                            <animation effect="rotatex" center="160" start="0" end="70" time="0" condition="true">Conditional</animation>							
-						</control>
-						<control type="image">
-							<description>background</description>
-							<posx>0</posx>
-							<posy>150</posy>
-							<width>210</width>
-							<height>120</height>
-							<aspectratio align="center" aligny="top">stretch</aspectratio>
-							<texture border="15">RecentAddedBack.png</texture>
-							<animation effect="rotatex" center="160" start="0" end="70" time="0" condition="true">Conditional</animation>
-						</control>
-					</itemlayout>
-					<focusedlayout height="155" width="215">
-						<control type="image">
-							<description>background</description>
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>215</width>
-							<height>160</height>
-							<texture border="15">RecentAddedBack.png</texture>
-							<visible>Control.HasFocus(8818)</visible>
-						</control>
-						<control type="image">
-							<description>background</description>
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>215</width>
-							<height>160</height>
-							<texture border="15">RecentAddedBack.png</texture>
-							<visible>!Control.HasFocus(8818)</visible>
-						</control>						
-						<control type="image">
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>195</width>
-							<height>140</height>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<animation condition="true" effect="zoom" center="auto" start="100" end="115" time="2000">Focus</animation>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
-							<visible>Control.HasFocus(8818)</visible>
-						</control>
-						<control type="image">
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>195</width>
-							<height>140</height>
-						    <aspectratio scalediffuse="false">stretch</aspectratio>
+							<width>220</width>
+							<height>155</height>
+							<aspectratio align="center" aligny="bottom">keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
 							<bordersize>5</bordersize>
-							<visible>!Control.HasFocus(8818)</visible>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>155</posy>
-							<width>195</width>
-							<height>95</height>
-						    <aspectratio scalediffuse="false">stretch</aspectratio>								
-							<texture background="true" flipy="true">$INFO[ListItem.Icon]</texture>
-							<animation effect="slide" end="-10,5" time="2000">Focus</animation>
-							<animation condition="true" effect="zoom" center="auto" start="100" end="115" time="2000">Focus</animation>
-							<animation effect="rotatex" center="160" start="0" end="70" time="0" condition="true">Conditional</animation>
-							<bordertexture border="0">button-nofocus.png</bordertexture>	 
-						</control>
-						<control type="image">
-							<description>background</description>
-							<posx>0</posx>
-							<posy>150</posy>
-							<width>210</width>
-							<height>120</height>
-							<aspectratio align="center" aligny="top">stretch</aspectratio>	
-							<animation effect="rotatex" center="160" start="0" end="70" time="0" condition="true">Conditional</animation>
-                            <texture border="0">RecentAddedBack.png</texture>
-							<visible>Control.HasFocus(8818)</visible>
-							<visible>true</visible>
-						</control>
-						<control type="image">
-							<description>background</description>
-							<posx>0</posx>
-							<posy>150</posy>
-							<width>210</width>
-							<height>120</height>
-							<aspectratio align="center" aligny="top">stretch</aspectratio>	
-							<animation effect="rotatex" center="160" start="0" end="70" time="0" condition="true">Conditional</animation>
-                            <texture border="0">RecentAddedBack.png</texture>
-							<visible>!Control.HasFocus(8818)</visible>
-							<visible>true</visible>
-						</control>
-					</focusedlayout>
-			 	 <include>Favourites3Content</include>
-				</control>
-				<control type="list" id="8817">
-				<animation condition="true" effect="zoom" center="auto" start="100" end="110" time="1000">Focus</animation>
-					<animation effect="slide" start="0,0" end="120,0" time="0" condition="StringCompare(Container(8817).NumItems,3)">conditional</animation>
-			        <animation condition="Control.HasFocus(8817)" effect="slide" start="0,0" end="0,20" time="1000">Conditional</animation>
-			        <animation condition="Control.HasFocus(8016)" effect="slide" start="0,0" end="0,30" time="1000">Conditional</animation>
-					<posx>10</posx>
-					<posy>205</posy>
-					<width>1500</width>
-					<height>260</height>
-					<onleft>8817</onleft>
-					<onright>8817</onright>
-					<onup>8016</onup>
-					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">8818</ondown>
-					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">8818</ondown>
-					<viewtype label="535">list</viewtype>
-					<pagecontrol>-</pagecontrol>
-					<scrolltime>200</scrolltime>
-					<orientation>Horizontal</orientation>
-				    <camera x="1340" y="380" />
-                    <animation effect="rotatey" center="50" start="10" end="10" time="0" condition="true">Conditional</animation>
-					<focusposition>1</focusposition>
-					<movement>2</movement>
-                      <itemlayout height="130" width="215">
-						<control type="image">
-							<description>background</description>
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>215</width>
-							<height>130</height>
-							<texture border="15">RecentAddedBack.png</texture>
-						</control>
-						<control type="image">
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>195</width>
-							<height>110</height>
-							  <aspectratio scalediffuse="false">stretch</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
 							<posx>120</posx>
-							<posy>-25</posy>
-							<width>205</width>
-							<height>20</height>
-							<font>font12</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-					</itemlayout>
-					<focusedlayout height="130" width="215">
-						<control type="image">
-							<description>background</description>
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>215</width>
-							<height>130</height>
-							<texture border="15">RecentAddedBack.png</texture>
-							<visible>Control.HasFocus(8817)</visible>
-						</control>
-						<control type="image">
-							<description>background</description>
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>215</width>
-							<height>130</height>
-							<texture border="15">RecentAddedBack.png</texture>
-							<visible>!Control.HasFocus(8817)</visible>
-						</control>						
-						<control type="image">
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>195</width>
-							<height>110</height>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<animation condition="true" effect="zoom" center="auto" start="100" end="115" time="2000">Focus</animation>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
-							<visible>Control.HasFocus(8817)</visible>
-						</control>
-						<control type="image">
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>195</width>
-							<height>110</height>
-						    <aspectratio scalediffuse="false">stretch</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
-							<visible>!Control.HasFocus(8817)</visible>
-						</control>
-						<control type="label">
-							<posx>120</posx>
-							<posy>-25</posy>
-							<width>200</width>
-							<height>20</height>
-							<font>font12</font>
-							<textcolor>blue</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-							<visible>Control.HasFocus(8817)</visible>
-						</control>
-						<control type="label">
-							<posx>120</posx>
-							<posy>-55</posy>
+							<posy>168</posy>
 							<width>200</width>
 							<height>20</height>
 							<font>font12</font>
@@ -3380,90 +3168,23 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>!Control.HasFocus(8817)</visible>
-						</control>
-					</focusedlayout>
-					<include>Favourites2Content</include>
-				</control>
-				<control type="list" id="8016">
-				<animation condition="true" effect="zoom" center="auto" start="100" end="110" time="1000">Focus</animation>
-				<animation condition="Control.HasFocus(8016)" effect="slide" start="0,0" end="0,20" time="1000">Conditional</animation>
-			    <animation condition="Control.HasFocus(8817)" effect="slide" start="0,0" end="0,10" time="1000">Conditional</animation>
-				<animation condition="Control.HasFocus(8818)" effect="slide" start="0,0" end="0,0" time="1000">Conditional</animation>
-					<posx>10</posx>
-					<posy>75</posy>
-					<width>1500</width>
-					<height>260</height>
-					<onleft>8016</onleft>
-					<onright>8016</onright>
-					<onup>21</onup>
-					<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">8817</ondown>
-					<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">8817</ondown>
-					<viewtype label="535">list</viewtype>
-					<pagecontrol>-</pagecontrol>
-					<scrolltime>200</scrolltime>
-					<orientation>Horizontal</orientation>
-				    <camera x="1340" y="380" />
-                    <animation effect="rotatey" center="50" start="10" end="10" time="0" condition="true">Conditional</animation>
-					<focusposition>1</focusposition>
-					<movement>2</movement>
-                      <itemlayout height="130" width="215">
-						<control type="image">
-							<description>background</description>
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>215</width>
-							<height>130</height>
-							<texture border="15">RecentAddedBack.png</texture>
-						</control>
-						<control type="image">
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>195</width>
-							<height>110</height>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-						</control>
-						<control type="label">
-							<posx>120</posx>
-							<posy>-25</posy>
-							<width>205</width>
-							<height>20</height>
-							<font>font12</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="130" width="215">
+					<focusedlayout height="220" width="240">
 						<control type="image">
 							<description>background</description>
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>215</width>
-							<height>130</height>
+							<width>240</width>
+							<height>220</height>
 							<texture border="15">RecentAddedBack.png</texture>
-							<visible>Control.HasFocus(8817)</visible>
 						</control>
-						<control type="image">
-							<description>background</description>
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>215</width>
-							<height>130</height>
-							<texture border="15">RecentAddedBack.png</texture>
-							<visible>!Control.HasFocus(8817)</visible>
-						</control>						
 						<control type="image">
 							<posx>10</posx>
 							<posy>10</posy>
-							<width>195</width>
-							<height>110</height>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<animation condition="true" effect="zoom" center="auto" start="100" end="115" time="2000">Focus</animation>
+							<width>220</width>
+							<height>155</height>
+							<aspectratio align="center" aligny="bottom">keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
@@ -3472,9 +3193,9 @@
 						<control type="image">
 							<posx>10</posx>
 							<posy>10</posy>
-							<width>195</width>
-							<height>110</height>
-						    <aspectratio scalediffuse="false">stretch</aspectratio>
+							<width>220</width>
+							<height>155</height>
+							<aspectratio align="center" aligny="bottom">keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
 							<bordersize>5</bordersize>
@@ -3482,7 +3203,7 @@
 						</control>
 						<control type="label">
 							<posx>120</posx>
-							<posy>-25</posy>
+							<posy>168</posy>
 							<width>200</width>
 							<height>20</height>
 							<font>font12</font>
@@ -3496,7 +3217,7 @@
 						</control>
 						<control type="label">
 							<posx>120</posx>
-							<posy>-55</posy>
+							<posy>168</posy>
 							<width>200</width>
 							<height>20</height>
 							<font>font12</font>
@@ -3509,8 +3230,31 @@
 							<visible>!Control.HasFocus(8016)</visible>
 						</control>
 					</focusedlayout>
-					<include>Favourites1Content</include>
-					
+					<include>FavouritesContent</include>
+				</control>
+				<control type="button">
+					<description>left Arrow</description>
+					<posx>-40</posx>
+					<posy>90</posy>
+					<width>30</width>
+					<height>40</height>
+					<texturefocus>arrow-big-left.png</texturefocus>
+					<texturenofocus>arrow-big-left.png</texturenofocus>
+					<onclick>Control.Move(8016,-1)</onclick>
+					<visible>Control.HasFocus(8016) + Container(8016).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="button">
+					<description>right Arrow</description>
+					<posx>970</posx>
+					<posy>90</posy>
+					<width>30</width>
+					<height>40</height>
+					<texturefocus>arrow-big-right.png</texturefocus>
+					<texturenofocus>arrow-big-right.png</texturenofocus>
+					<onclick>Control.Move(8016,1)</onclick>
+					<visible>Control.HasFocus(8016) + Container(8016).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 		</control>
@@ -7532,434 +7276,212 @@
 				<label>$INFO[Window(Home).Property(favourite.1.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.1.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.1.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.1.path))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(favourite.2.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.2.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.2.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.2.path))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(favourite.3.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.3.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.3.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.3.path))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(favourite.4.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.4.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.4.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.4.path))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(favourite.5.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.5.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.5.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.5.path))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(favourite.6.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.6.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.6.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.6.path))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(favourite.7.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.7.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.7.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.7.path))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(favourite.8.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.8.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.8.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.8.path))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(favourite.9.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.9.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.9.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.9.path))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(favourite.10.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.10.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.10.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.10.path))</visible>
 			</item>
-						<item>
+			<item>
 				<label>$INFO[Window(Home).Property(favourite.11.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.11.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.11.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.11.path))</visible>
 			</item>
-						<item>
+			<item>
 				<label>$INFO[Window(Home).Property(favourite.12.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.12.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.12.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.12.path))</visible>
 			</item>
-						<item>
+			<item>
 				<label>$INFO[Window(Home).Property(favourite.13.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.13.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.13.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.13.path))</visible>
 			</item>
-						<item>
+			<item>
 				<label>$INFO[Window(Home).Property(favourite.14.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.14.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.14.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.14.path))</visible>
 			</item>
-						<item>
+			<item>
 				<label>$INFO[Window(Home).Property(favourite.15.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.15.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.15.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.15.path))</visible>
 			</item>
-						<item>
+			<item>
 				<label>$INFO[Window(Home).Property(favourite.16.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.16.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.16.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.16.path))</visible>
 			</item>
-						<item>
+			<item>
 				<label>$INFO[Window(Home).Property(favourite.17.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.17.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.17.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.17.path))</visible>
 			</item>
-						<item>
+			<item>
 				<label>$INFO[Window(Home).Property(favourite.18.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.18.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.18.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.18.path))</visible>
 			</item>
-						<item>
+			<item>
 				<label>$INFO[Window(Home).Property(favourite.19.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.19.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.19.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.19.path))</visible>
 			</item>
-						<item>
+			<item>
 				<label>$INFO[Window(Home).Property(favourite.20.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.20.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.20.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.20.path))</visible>
 			</item>
-						<item>
-				<label>$INFO[Window(Home).Property(favourite.21.name)]</label>
+			<item>			
+			<label>$INFO[Window(Home).Property(favourite.21.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.21.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.21.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.21.path))</visible>
 			</item>
-						<item>
+			<item>
 				<label>$INFO[Window(Home).Property(favourite.22.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.22.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.22.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.22.path))</visible>
 			</item>
-						<item>
+			<item>
 				<label>$INFO[Window(Home).Property(favourite.23.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.23.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.23.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.23.path))</visible>
-		            	</item>					
+			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(favourite.24.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.24.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.24.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.24.path))</visible>
 			</item>
-						<item>
+			<item>
 				<label>$INFO[Window(Home).Property(favourite.25.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.25.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.25.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.25.path))</visible>
 			</item>
-						<item>
+			<item>
 				<label>$INFO[Window(Home).Property(favourite.26.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.26.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.26.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.26.path))</visible>
 			</item>
-						<item>
+			<item>
 				<label>$INFO[Window(Home).Property(favourite.27.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.27.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.27.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.27.path))</visible>
-			</item>					
-			            <item>
+			</item>
+			<item>
 				<label>$INFO[Window(Home).Property(favourite.28.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.28.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.28.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.28.path))</visible>
 			</item>
-						<item>
+			<item>
 				<label>$INFO[Window(Home).Property(favourite.29.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.29.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.29.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.29.path))</visible>
 			</item>
-						<item>
+			<item>
 				<label>$INFO[Window(Home).Property(favourite.30.name)]</label>
 				<onclick>$INFO[Window(Home).Property(favourite.30.path)]</onclick>
 				<thumb>$INFO[Window(Home).Property(favourite.30.thumb)]</thumb>
-				<icon>special://skin/backgrounds/Fire.jpg</icon>
+				<icon>special://skin/backgrounds/homescreen/favourite.jpg</icon>
 				<visible>!IsEmpty(Window(Home).Property(favourite.30.path))</visible>
-			</item>
-		</content>
-	</include>
-	<include name="Favourites1Content">
-		<content>	
-		<item>
-			<label>$INFO[Skin.String(AddonSetOne.1.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetOne.1.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetOne.1.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetOne.1.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetOne.2.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetOne.2.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetOne.2.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetOne.2.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetOne.3.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetOne.3.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetOne.3.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetOne.3.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetOne.4.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetOne.4.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetOne.4.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetOne.4.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetOne.5.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetOne.5.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetOne.5.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetOne.5.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetTwo.1.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetTwo.1.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetTwo.1.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetTwo.1.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetTwo.2.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetTwo.2.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetTwo.2.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetTwo.2.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetTwo.3.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetTwo.3.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetTwo.3.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetTwo.3.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetTwo.4.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetTwo.4.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetTwo.4.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetTwo.4.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetTwo.5.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetTwo.5.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetTwo.5.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetTwo.5.Path))</visible>
-		</item>		
-		</content>
-	</include>
-	<include name="Favourites2Content">
-		<content>	
-		<item>
-			<label>$INFO[Skin.String(AddonSetThree.1.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetThree.1.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetThree.1.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetThree.1.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetThree.2.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetThree.2.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetThree.2.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetThree.2.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetThree.3.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetThree.3.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetThree.3.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetThree.3.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetThree.4.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetThree.4.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetThree.4.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetThree.4.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetThree.5.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetThree.5.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetThree.5.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetThree.5.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetFour.1.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetFour.1.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetFour.1.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetFour.1.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetFour.2.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetFour.2.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetFour.2.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetFour.2.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetFour.3.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetFour.3.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetFour.3.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetFour.3.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetFour.4.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetFour.4.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetFour.4.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetFour.4.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetFour.5.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetFour.5.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetFour.5.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetFour.5.Path))</visible>
-		</item>		
-		</content>
-	</include>
-	<include name="Favourites3Content">
-	<content>	
-		<item>
-			<label>$INFO[Skin.String(AddonSetFive.1.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetFive.1.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetFive.1.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetFive.1.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetFive.2.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetFive.2.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetFive.2.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetFive.2.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetFive.3.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetFive.3.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetFive.3.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetFive.3.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetFive.4.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetFive.4.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetFive.4.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetFive.4.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetFive.5.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetFive.5.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetFive.5.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetFive.5.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetSix.1.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetSix.1.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetSix.1.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetSix.1.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetSix.2.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetSix.2.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetSix.2.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetSix.2.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetSix.3.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetSix.3.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetSix.3.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetSix.3.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetSix.4.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetSix.4.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetSix.4.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetSix.4.Path))</visible>
-		</item>
-		<item>
-			<label>$INFO[Skin.String(AddonSetSix.5.Label)]</label>
-			<onclick>$INFO[Skin.String(AddonSetSix.5.Path)]</onclick>
-			<icon>special://skin/backgrounds/Fire.jpg</icon>
-			<thumb>$INFO[Skin.String(AddonSetSix.5.icon)]</thumb>
-			<visible>!IsEmpty(Skin.String(AddonSetSix.5.Path))</visible>
-		</item>		
+			</item>		
 		</content>
 	</include>
 </includes>

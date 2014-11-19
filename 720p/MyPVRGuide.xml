@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<views>10,11,12,13</views>
+	<views>10,11,12,13,5800</views>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="image">
@@ -55,6 +55,7 @@
 			<include>PVRGuideViewNow</include>
 			<include>PVRGuideViewNext</include>
 			<include>PVRGuideViewChannel</include>
+			<include>EPGPictures</include>
 		</control>
 		<include>CommonNowPlaying</include>
 		<include>BehindDialogFadeOut</include>
