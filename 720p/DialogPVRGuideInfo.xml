@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">7</defaultcontrol>
+		<onload>SetProperty(Window.HasSettings,True,home)</onload>
+	<onload>ClearProperty(MediaMenu,Home)</onload>
+	<onunload>ClearProperty(Window.HasSettings,Home)</onunload>
 	<coordinates>
 		<system>1</system>
 		<posx>20</posx>
 		<posy>30</posy>
 		<origin x="275" y="30">![Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)]</origin>
 	</coordinates>
-	<include>DialogEffect</include>
+	
+		<visible>!Window.IsVisible(script-Actors-DialogInfo.xml)</visible>
 	<controls>
 		<control type="group">
 			<control type="image">
@@ -91,109 +95,213 @@
 						<texture>$INFO[ListItem.PlotOutline]</texture>
 					</control>					
 					<control type="label">
-						<description>Time description</description>
+						<description>Original Title</description>
 						<posx>80</posx>
 						<posy>0</posy>
 						<width>170</width>
 						<height>25</height>
 						<align>right</align>
 						<aligny>center</aligny>
-						<font>font13</font>
-						<textcolor>blue</textcolor>
-						<label>$LOCALIZE[142]</label>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<label>Original Title:</label>
 					</control>
-					<control type="label">
+					<control type="button">
 						<description>Time value</description>
 						<posx>90</posx>
 						<posy>0</posy>
-						<width>470</width>
+						<width>320</width>
 						<height>25</height>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>font13</font>
 						<textcolor>white</textcolor>
-						<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime] ($INFO[ListItem.StartDate])</label>
+						<label>$INFO[ListItem.OriginalTitle]</label>
+						<onclick>RunScript(script.metadata.actors,$INFO[ListItem.OriginalTitle)]</onclick>	
 					</control>
 					<control type="label">
-						<description>Duration</description>
+						<description>Director</description>
 						<posx>80</posx>
 						<posy>35</posy>
 						<width>170</width>
 						<height>25</height>
 						<align>right</align>
 						<aligny>center</aligny>
-						<font>font13</font>
-						<textcolor>blue</textcolor>
-						<label>$LOCALIZE[180]:</label>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<label>Director:</label>
 					</control>
-					<control type="label">
-						<description>Duration value</description>
+					<control type="button">
+						<description>Director</description>
 						<posx>90</posx>
 						<posy>35</posy>
-						<width>470</width>
+						<width>320</width>
 						<height>25</height>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>font13</font>
 						<textcolor>white</textcolor>
-						<label>$INFO[ListItem.Duration]</label>
+						<label>$INFO[ListItem.Director]</label>
+						<onclick>RunScript(script.metadata.actors,$INFO[ListItem.Director])</onclick>	
 					</control>
 					<control type="label">
-						<description>Channel Name</description>
+						<description>Actor</description>
 						<posx>80</posx>
 						<posy>70</posy>
 						<width>170</width>
 						<height>25</height>
 						<align>right</align>
 						<aligny>center</aligny>
-						<font>font13</font>
-						<textcolor>blue</textcolor>
-						<label>$LOCALIZE[19148]:</label>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<label>Actor:</label>
 					</control>
-					<control type="fadelabel">
-						<description>Channel Value</description>
+					<control type="button">
+						<description>Actor</description>
 						<posx>90</posx>
 						<posy>70</posy>
-						<width>470</width>
+						<width>320</width>
 						<height>25</height>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>font13</font>
 						<textcolor>white</textcolor>
-						<label>$INFO[ListItem.ChannelName]</label>
+						<label>$INFO[ListItem.Actor]</label>
+						<onclick>RunScript(script.metadata.actors,$INFO[ListItem.Actor])</onclick>				
 					</control>
 					<control type="label">
-						<description>Genre</description>
+						<description>Writer</description>
 						<posx>80</posx>
 						<posy>105</posy>
 						<width>170</width>
 						<height>25</height>
 						<align>right</align>
 						<aligny>center</aligny>
-						<font>font13</font>
-						<textcolor>blue</textcolor>
-						<label>$LOCALIZE[135]:</label>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<label>Writer:</label>
 					</control>
-					<control type="label">
+					<control type="button">
 						<description>Genre value</description>
 						<posx>90</posx>
 						<posy>105</posy>
-						<width>470</width>
-						<label fallback="161">$INFO[ListItem.Genre]</label>
+						<width>320</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Writer]</label>
 						<align>left</align>
 						<font>font13</font>
 						<scroll>true</scroll>
+						<label>$INFO[ListItem.Writer]</label>
+						<onclick>RunScript(script.metadata.actors,$INFO[ListItem.Writer])</onclick>		
+					</control>
+					<control type="image" id="2">
+						<description>Genre</description>
+						<posx>90</posx>
+						<posy>140</posy>
+						<width>320</width>
+						<height>25</height>
+						<aspectratio>stretch</aspectratio>
+						<texture border="3">genres/$INFO[ListItem.Genre].png</texture>
+						<colordiffuse>50FFFAF0</colordiffuse>	
+					</control>					
+					<control type="label">
+						<description>Genre</description>
+						<posx>80</posx>
+						<posy>140</posy>
+						<width>170</width>
+						<height>25</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<label>$LOCALIZE[135]:</label>
+					</control>
+					<control type="button">
+						<description>Genre</description>
+						<posx>90</posx>
+						<posy>140</posy>
+						<width>320</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Genre]</label>
+						<align>left</align>
+						<font>font13</font>
+						<scroll>true</scroll>
+					</control>
+					<control type="label">
+						<description>YearEPG</description>
+						<posx>80</posx>
+						<posy>175</posy>
+						<width>160</width>
+						<height>25</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<label>Year:</label>
+					</control>
+					<control type="button">
+						<description>YearEPG</description>
+						<posx>90</posx>
+						<posy>175</posy>
+						<width>160</width>
+						<height>25</height>
+						<label>$INFO[ListItem.YearEPG]</label>
+						<align>left</align>
+						<font>font13</font>
+						<scroll>true</scroll>
+					</control>
+					<control type="label">
+						<description>EpisodeName</description>
+						<posx>80</posx>
+						<posy>210</posy>
+						<width>160</width>
+						<height>25</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<label>EpisodeID:</label>
+					</control>
+					<control type="button">
+						<description>EpisodeName</description>
+						<posx>90</posx>
+						<posy>210</posy>
+						<width>160</width>
+						<height>25</height>
+						<label>$INFO[ListItem.EpisodeName]</label>
+						<align>left</align>
+						<font>font13</font>
+						<scroll>true</scroll>
+					</control>
+					<control type="label">
+						<description>IconEPG</description>
+						<posx>80</posx>
+						<posy>245</posy>
+						<width>160</width>
+						<height>25</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<label>Icon:</label>
+					</control>
+				<control type="image">
+						<posx>295</posx>
+						<posy>175</posy>
+						<width>90</width>
+						<height>75</height>
+						<texture>$INFO[ListItem.Icon]</texture>
 					</control>
 				</control>
 				<control type="textbox" id="400">
 					<description>Plot value</description>
 					<posx>40</posx>
-					<posy>275</posy>
+					<posy>390</posy>
 					<width>650</width>
-					<height>295</height>
+					<height>200</height>
 					<font>font12</font>
 					<align>justify</align>
-					<textcolor>white</textcolor>
+					<textcolor>blue</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<pagecontrol>-</pagecontrol>
 					<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
@@ -229,5 +337,6 @@
 				</control>
 			</control>
 		</control>
+		<include>DialogEffect</include>
 	</controls>
 </window>
