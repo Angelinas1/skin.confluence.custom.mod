@@ -1630,32 +1630,29 @@
 	<include name="HomeSubMenuLiveTV">
 		<content>
 			<item>
-				<label>19023</label>
+				<label>19019</label>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick>ActivateWindow(PVR)</onclick>
-				<onclick>Setfocus(32)</onclick>
-				<onclick>Setfocus(11)</onclick>
+				<onclick>ActivateWindow(TVChannels)</onclick>
 			</item>
 			<item>
-				<label>19024</label>
+				<label>19069</label>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick>ActivateWindow(PVR)</onclick>
-				<onclick>Setfocus(33)</onclick>
-				<onclick>Setfocus(12)</onclick>
+				<onclick>ActivateWindow(TVGuide)</onclick>
 			</item>
 			<item>
 				<label>19163</label>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick>ActivateWindow(PVR)</onclick>
-				<onclick>Setfocus(34)</onclick>
-				<onclick>Setfocus(13)</onclick>
+				<onclick>ActivateWindow(TVRecordings)</onclick>
 			</item>
 			<item>
 				<label>19040</label>
 				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-				<onclick>ActivateWindow(PVR)</onclick>
-				<onclick>Setfocus(35)</onclick>
-				<onclick>Setfocus(14)</onclick>
+				<onclick>ActivateWindow(TVTimers)</onclick>
+			</item>
+			<item>
+				<label>19021</label>
+				<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+				<onclick>ActivateWindow(RadioChannels)</onclick>
 			</item>
 		</content>
 	</include>
